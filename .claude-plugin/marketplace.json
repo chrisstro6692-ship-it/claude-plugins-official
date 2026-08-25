@@ -1122,6 +1122,26 @@
       ]
     },
     {
+      "name": "create-instructions",
+      "description": "Create an instructions file (.instructions.md) for a project rule or convention.",
+      "author": {
+        "name": "Microsoft"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/vscode.git",
+        "path": "extensions/copilot/assets/prompts/skills/create-instructions",
+        "ref": "main",
+        "sha": "b0e09b7356b9a243fe6fe87ab444b50b55361168"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://code.visualstudio.com"
+    },
+    {
       "name": "crowdsec",
       "description": "Operational skill for installing, configuring, operating, and debugging CrowdSec (cscli, LAPI/CAPI, hub, bouncers, WAF/AppSec) across bare-metal, Docker, and Kubernetes.",
       "author": {
@@ -1371,6 +1391,46 @@
       "homepage": "https://github.com/awslabs/agent-plugins"
     },
     {
+      "name": "design-consultation",
+      "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your project's design source of truth.",
+      "author": {
+        "name": "Garry Tan"
+      },
+      "category": "design",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/garrytan/gstack.git",
+        "path": "design-consultation",
+        "ref": "main",
+        "sha": "ad8400543cd9ce8d07641362db48d44a95417e33"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/garrytan/gstack"
+    },
+    {
+      "name": "design-shotgun",
+      "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. Standalone design exploration you can run anytime.",
+      "author": {
+        "name": "Garry Tan"
+      },
+      "category": "design",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/garrytan/gstack.git",
+        "path": "design-shotgun",
+        "ref": "main",
+        "sha": "ad8400543cd9ce8d07641362db48d44a95417e33"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/garrytan/gstack"
+    },
+    {
       "name": "desktop-commander",
       "description": "MCP server for terminal commands, process management, and file operations across text, code, PDF, DOCX, Excel, images, and structured data.",
       "author": {
@@ -1391,6 +1451,86 @@
       "description": "Discord messaging bridge with built-in access control. Manage pairing, allowlists, and policy via /discord:access.",
       "category": "productivity",
       "source": "./external_plugins/discord"
+    },
+    {
+      "name": "docker-management",
+      "description": "Manage Docker containers, images, volumes, networks, and Compose stacks — lifecycle ops, debugging, cleanup, and Dockerfile optimization.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "optional-skills/devops/docker-management",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "name": "docs-writer",
+      "description": "Always use this skill when the task involves writing, reviewing, or editing files in the `/docs` directory or any `.md` files in the repository.",
+      "author": {
+        "name": "Google Gemini"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/google-gemini/gemini-cli.git",
+        "path": ".gemini/skills/docs-writer",
+        "ref": "main",
+        "sha": "812f7a2bcf20b6e80e2e50c3c8fa8e26567bc1e8"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/google-gemini/gemini-cli"
+    },
+    {
+      "name": "docstring",
+      "description": "Write docstrings for PyTorch functions and methods following PyTorch conventions. Use when writing or updating docstrings in PyTorch code.",
+      "author": {
+        "name": "PyTorch"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pytorch/pytorch.git",
+        "path": ".claude/skills/docstring",
+        "ref": "main",
+        "sha": "0303631de59c026709a7c2a90520249fb2d92d39"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://pytorch.org"
+    },
+    {
+      "name": "document-public-apis",
+      "description": "Document undocumented public APIs in PyTorch by removing functions from coverage_ignore_functions and coverage_ignore_classes in docs/source/conf.py, running Sphinx coverage, and adding the appropriate autodoc directives to the correct .md or .rst doc files. Use when a user asks to remove functions from conf.py ignore lists.",
+      "author": {
+        "name": "PyTorch"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pytorch/pytorch.git",
+        "path": ".claude/skills/document-public-apis",
+        "ref": "main",
+        "sha": "0303631de59c026709a7c2a90520249fb2d92d39"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://pytorch.org"
     },
     {
       "name": "dominodatalab",
@@ -1452,7 +1592,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -1466,12 +1606,37 @@
       },
       "strict": false,
       "skills": [
+        "./code-tour",
+        "./codebase-onboarding",
+        "./design-system",
+        "./ecc-tools-cost-audit",
+        "./eval-harness",
         "./inventory-demand-planning",
         "./iterative-retrieval",
         "./kotlin-exposed-patterns",
         "./postgres-patterns",
         "./pytorch-patterns",
         "./ralphinho-rfc-pipeline"
+      ],
+      "homepage": "https://github.com/affaan-m/ECC"
+    },
+    {
+      "name": "everything-claude-code-conventions",
+      "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+      "author": {
+        "name": "affaan-m"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/affaan-m/ECC.git",
+        "path": ".agents/skills/everything-claude-code",
+        "ref": "main",
+        "sha": "d8409a4b0813771235555e32e3d8046a73988bfa"
+      },
+      "strict": false,
+      "skills": [
+        "."
       ],
       "homepage": "https://github.com/affaan-m/ECC"
     },
@@ -1512,6 +1677,26 @@
         "sha": "ea6f1492f4e69e5b530c3fb8162728a1b0d982eb"
       },
       "homepage": "https://github.com/expo/skills/blob/main/plugins/expo/README.md"
+    },
+    {
+      "name": "fact-check",
+      "description": "Verify technical accuracy of JavaScript concept pages by checking code examples, MDN/ECMAScript compliance, and external resources to prevent misinformation.",
+      "author": {
+        "name": "leonardomso"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/leonardomso/33-js-concepts.git",
+        "path": ".claude/skills/fact-check",
+        "ref": "master",
+        "sha": "16d0d95c02b19df6a8c841f1a0012d7b7367a340"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/leonardomso/33-js-concepts"
     },
     {
       "name": "fakechat",
@@ -1941,6 +2126,26 @@
         "sha": "3ae8f77275ee03397d7020ddca8793f1cd8f7cfe"
       },
       "homepage": "https://jfrog.com"
+    },
+    {
+      "name": "jupyter-notebook",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "author": {
+        "name": "Microsoft"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/ai-agents-for-beginners.git",
+        "path": ".agents/skills/jupyter-notebook",
+        "ref": "main",
+        "sha": "01777b05e8afeba6bf5a6dbe74cc2293372d3693"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/microsoft/ai-agents-for-beginners"
     },
     {
       "name": "knowledge-catalog",
