@@ -1088,6 +1088,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security"
     },
     {
+      "name": "cli-anything-notebooklm",
+      "description": "Experimental NotebookLM harness for listing notebooks, managing sources, asking questions, generating artifacts, and downloading outputs through an installed notebooklm CLI.",
+      "author": {
+        "name": "HKUDS"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/HKUDS/CLI-Anything.git",
+        "path": "skills/cli-anything-notebooklm",
+        "ref": "main",
+        "sha": "810c18b0d1ab9b234bc996c9fd999318523a3ef0"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/HKUDS/CLI-Anything"
+    },
+    {
       "name": "clickhouse",
       "description": "Connect Claude to your ClickHouse Cloud databases. Browse organizations, services, databases, and table schemas. Run read-only SQL queries against your data and get instant analytical answers. Monitor service backups, review billing costs, and inspect ClickPipe configurations - all through natural conversation.",
       "author": {
@@ -1322,6 +1342,47 @@
       ]
     },
     {
+      "name": "cookbook-audit",
+      "description": "Audit an Anthropic Cookbook notebook based on a rubric. Use whenever a notebook review or audit is requested.",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-cookbooks.git",
+        "path": ".claude/skills/cookbook-audit",
+        "ref": "main",
+        "sha": "35f2eec7e44897c537e44441b7dff2f0ecbfb804"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/anthropics/claude-cookbooks"
+    },
+    {
+      "name": "cosmosdb-datamodeling",
+      "description": "Step-by-step guide for capturing key application requirements for a NoSQL use case and producing an Azure Cosmos DB NoSQL data model design using best practices and common patterns. Produces cosmosdb_requirements.md and cosmosdb_data_model.md files.",
+      "author": {
+        "name": "GitHub"
+      },
+      "category": "database",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/github/awesome-copilot.git",
+        "path": "skills/cosmosdb-datamodeling",
+        "ref": "main",
+        "sha": "d0d9d9f014abb27bf0d8321851867500a3a46bba"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/github/awesome-copilot"
+    },
+    {
       "name": "create-instructions",
       "description": "Create an instructions file (.instructions.md) for a project rule or convention.",
       "author": {
@@ -1402,6 +1463,26 @@
           }
         }
       }
+    },
+    {
+      "name": "cv-classification",
+      "description": "Best practices for image classification tasks. Use when working on CIFAR, ImageNet, or other classification benchmarks.",
+      "author": {
+        "name": "aiming-lab"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw.git",
+        "path": "researchclaw/skills/builtin/domain/cv-classification",
+        "ref": "main",
+        "sha": "be4ba4755bf1b52220f25e13b2293b5956590070"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/aiming-lab/AutoResearchClaw"
     },
     {
       "name": "cwc-makers",
@@ -1564,7 +1645,7 @@
     },
     {
       "name": "davila7-scientific-skills",
-      "description": "Curated scientific-computing skill bundle: AlphaFold protein-structure database access, Astropy for astronomy/astrophysics, Biomni autonomous biomedical research agent, BioServices multi-database bioinformatics access, and the BRENDA enzyme database.",
+      "description": "Curated scientific-computing skill bundle: AlphaFold protein-structure database access, Astropy, Biomni autonomous biomedical research agent, BioServices multi-database bioinformatics access, BRENDA enzyme database, CZ CELLxGENE Census single-cell data, Cirq quantum computing, ClinicalTrials.gov/ClinPGx/ClinVar/COSMIC clinical and genomic databases, COBRApy metabolic modeling, DeepChem molecular ML, deepTools NGS visualization, DiffDock molecular docking, and DNAnexus cloud genomics integration.",
       "author": {
         "name": "davila7"
       },
@@ -1582,7 +1663,18 @@
         "./astropy",
         "./biomni",
         "./bioservices",
-        "./brenda-database"
+        "./brenda-database",
+        "./cellxgene-census",
+        "./cirq",
+        "./clinicaltrials-database",
+        "./clinpgx-database",
+        "./clinvar-database",
+        "./cobrapy",
+        "./cosmic-database",
+        "./deepchem",
+        "./deeptools",
+        "./diffdock",
+        "./dnanexus-integration"
       ],
       "homepage": "https://github.com/davila7/claude-code-templates"
     },
@@ -1669,6 +1761,26 @@
         "sha": "1eccc8b09cc09805202a1737fd20d605356c3671"
       },
       "homepage": "https://desktopcommander.app"
+    },
+    {
+      "name": "digital-brain-skill",
+      "description": "A personal operating system for founders, creators, and builders: content creation, voice consistency, relationship lookup, meeting preparation, weekly review, goal tracking, personal brand management, and network management. Part of the Agent Skills for Context Engineering collection.",
+      "author": {
+        "name": "muratcankoylan"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git",
+        "path": "examples/digital-brain-skill",
+        "ref": "main",
+        "sha": "6dbe1a1d868eab51a3bc9011b0f55e2891513e40"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering"
     },
     {
       "name": "discord",
@@ -1785,6 +1897,26 @@
         "sha": "4135e81caf8275b4c97caef244479e0dcb6fb823"
       },
       "homepage": "https://www.dropbox.com"
+    },
+    {
+      "name": "drug-discovery",
+      "description": "Pharmaceutical research assistant for drug discovery workflows. Search bioactive compounds on ChEMBL, calculate drug-likeness (Lipinski Ro5, QED, TPSA, synthetic accessibility), look up drug-drug interactions via OpenFDA, interpret ADMET profiles, and assist with lead optimization. Use for medicinal chemistry questions, molecule property analysis, clinical pharmacology, and open-science drug research.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "optional-skills/research/drug-discovery",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "name": "duckdb-skills",
@@ -4012,7 +4144,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), and binary/assembly analysis patterns.",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, and database-migration observability.",
       "author": {
         "name": "sickn33"
       },
@@ -4022,7 +4154,7 @@
         "url": "https://github.com/sickn33/agentic-awesome-skills.git",
         "path": "skills",
         "ref": "main",
-        "sha": "50a74ca3ddea4a91a45bdc625f0e354b6e54f1b4"
+        "sha": "ba9ae11a0cfb897f00a94cb1f4998c7ef9614b21"
       },
       "strict": false,
       "skills": [
@@ -4032,6 +4164,12 @@
         "./azure-monitor-opentelemetry-ts",
         "./binary-analysis-patterns",
         "./biopython",
+        "./cirq",
+        "./citation-management",
+        "./computer-vision-expert",
+        "./conductor-validator",
+        "./data-scientist",
+        "./database-migrations-migration-observability",
         "./helium-mcp",
         "./matplotlib",
         "./monte-carlo-prevent",
