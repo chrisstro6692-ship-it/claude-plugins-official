@@ -1645,7 +1645,7 @@
     },
     {
       "name": "davila7-scientific-skills",
-      "description": "Curated scientific-computing skill bundle: AlphaFold protein-structure database access, Astropy, Biomni autonomous biomedical research agent, BioServices multi-database bioinformatics access, BRENDA enzyme database, CZ CELLxGENE Census single-cell data, Cirq quantum computing, ClinicalTrials.gov/ClinPGx/ClinVar/COSMIC clinical and genomic databases, COBRApy metabolic modeling, DeepChem molecular ML, deepTools NGS visualization, DiffDock molecular docking, and DNAnexus cloud genomics integration.",
+      "description": "Curated scientific-computing skill bundle covering protein/molecular biology databases (AlphaFold, DrugBank, ENA, Ensembl, Gene, GEO, GWAS, HMDB, KEGG, ClinicalTrials.gov, ClinPGx, ClinVar, COSMIC), astronomy (Astropy), quantum computing (Cirq), single-cell (CELLxGENE Census), metabolic modeling (COBRApy), molecular ML (DeepChem, ESM protein language models, molfeat featurization), NGS visualization (deepTools), molecular docking (DiffDock), biomedical data management (LaminDB), cloud genomics (DNAnexus), and autonomous biomedical research (Biomni, BioServices, BRENDA).",
       "author": {
         "name": "davila7"
       },
@@ -1674,7 +1674,19 @@
         "./deepchem",
         "./deeptools",
         "./diffdock",
-        "./dnanexus-integration"
+        "./dnanexus-integration",
+        "./drugbank-database",
+        "./ena-database",
+        "./ensembl-database",
+        "./esm",
+        "./fda-database",
+        "./gene-database",
+        "./geo-database",
+        "./gwas-database",
+        "./hmdb-database",
+        "./kegg-database",
+        "./lamindb",
+        "./molfeat"
       ],
       "homepage": "https://github.com/davila7/claude-code-templates"
     },
@@ -1948,7 +1960,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -1968,6 +1980,7 @@
         "./design-system",
         "./ecc-tools-cost-audit",
         "./eval-harness",
+        "./healthcare-cdss-patterns",
         "./inventory-demand-planning",
         "./iterative-retrieval",
         "./knowledge-ops",
@@ -2188,6 +2201,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/github"
     },
     {
+      "name": "github-qa-labels",
+      "description": "Label GitHub issues and PRs found during QA testing. Use when organizing QA findings with proper labels.",
+      "author": {
+        "name": "Storybook"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/storybookjs/storybook.git",
+        "path": ".agents/skills/github-qa-labels",
+        "ref": "next",
+        "sha": "1ba6c6c869dd2b4f4d010d6e8ab13e202636c4cf"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/storybookjs/storybook"
+    },
+    {
       "name": "gitkraken",
       "description": "Gives Claude access to your real Git and project context: commits, branches, pull requests, and issues across every repo you work in. Works with GitHub, GitLab, Azure DevOps, Bitbucket, and Jira.",
       "author": {
@@ -2209,6 +2242,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/gitlab"
     },
     {
+      "name": "goplaces",
+      "description": "Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "location",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": "skills/goplaces",
+        "ref": "main",
+        "sha": "ecf06317796ce74dc49511f8aca02ebde48af510"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
+    },
+    {
       "name": "gopls-lsp",
       "description": "Go language server for code intelligence and refactoring",
       "version": "1.0.0",
@@ -2227,6 +2280,26 @@
           }
         }
       }
+    },
+    {
+      "name": "gpt-researcher",
+      "description": "GPT Researcher is an autonomous deep research agent that conducts web and local research, producing detailed reports with citations. Use this skill when helping developers understand, extend, debug, or integrate with GPT Researcher - including adding features, understanding the architecture, working with the API, customizing research workflows, adding new retrievers, integrating MCP data sources, or troubleshooting research pipelines.",
+      "author": {
+        "name": "assafelovic"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/assafelovic/gpt-researcher.git",
+        "path": ".claude",
+        "ref": "main",
+        "sha": "6f998577d547b1e54ec662dac63583aa11e3b84b"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/assafelovic/gpt-researcher"
     },
     {
       "name": "grafana-assistant",
@@ -2358,6 +2431,26 @@
         "sha": "10259650b82ceee43741ce2f8a7fa564a8c286c7"
       },
       "homepage": "https://www.hostinger.com"
+    },
+    {
+      "name": "hugging-face-paper-publisher",
+      "description": "Publish and manage research papers on Hugging Face Hub. Supports creating paper pages, linking papers to models/datasets, claiming authorship, and generating professional markdown-based research articles.",
+      "author": {
+        "name": "patchy631"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/patchy631/ai-engineering-hub.git",
+        "path": "hugging-face-skills/skills/hugging-face-paper-publisher",
+        "ref": "main",
+        "sha": "c5c22786b3200fd1c34024e28facc590ddba374f"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/patchy631/ai-engineering-hub"
     },
     {
       "name": "huggingface-hub",
@@ -4144,7 +4237,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, and database-migration observability.",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, and an MLOps-engineer persona.",
       "author": {
         "name": "sickn33"
       },
@@ -4170,8 +4263,11 @@
         "./conductor-validator",
         "./data-scientist",
         "./database-migrations-migration-observability",
+        "./fda-medtech-compliance-auditor",
         "./helium-mcp",
+        "./hugging-face-trackio",
         "./matplotlib",
+        "./mlops-engineer",
         "./monte-carlo-prevent",
         "./monte-carlo-validation-notebook",
         "./oral-health-analyzer",
