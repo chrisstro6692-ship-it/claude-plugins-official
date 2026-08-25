@@ -51,6 +51,26 @@
       "homepage": "https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity"
     },
     {
+      "name": "agent-introspection-debugging",
+      "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+      "author": {
+        "name": "Affaan Mustafa"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/affaan-m/everything-claude-code.git",
+        "path": "skills",
+        "ref": "main",
+        "sha": "d8409a4b0813771235555e32e3d8046a73988bfa"
+      },
+      "strict": false,
+      "skills": [
+        "./agent-introspection-debugging"
+      ],
+      "homepage": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
       "name": "agent-sdk-dev",
       "description": "Development kit for working with the Claude Agent SDK",
       "author": {
