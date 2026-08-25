@@ -35,6 +35,26 @@
       "homepage": "https://42crunch.com"
     },
     {
+      "name": "academic-paper-review",
+      "description": "Use this skill when the user requests to review, analyze, critique, or summarize academic papers, research articles, preprints, or scientific publications. Supports comprehensive structured reviews covering methodology assessment, contribution evaluation, literature positioning, and constructive feedback generation.",
+      "author": {
+        "name": "ByteDance"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bytedance/deer-flow.git",
+        "path": "skills/public/academic-paper-review",
+        "ref": "main",
+        "sha": "788a890bd022689ef293e6bbfa2c12988173db6c"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/bytedance/deer-flow"
+    },
+    {
       "name": "adobe-for-creativity",
       "description": "Harness Adobe's creative AI-powered tools to edit images, automate design workflows, and bring creative visions to life — from background removal to vectorization and professional retouching.",
       "author": {
@@ -248,6 +268,46 @@
       "homepage": "https://github.com/amplitude/mcp-marketplace"
     },
     {
+      "name": "analyzing-experiment-session-replays",
+      "description": "Analyze session replay patterns across experiment variants to understand user behavior differences. Use when the user wants to see how users interact with different experiment variants, identify usability issues, compare behavior patterns between control and test groups, or get qualitative insights to complement quantitative experiment results.",
+      "author": {
+        "name": "PostHog"
+      },
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PostHog/ai-plugin.git",
+        "path": "skills/analyzing-experiment-session-replays",
+        "ref": "main",
+        "sha": "b708fd5c82e37fc12ed4b80045407119dafe8aaa"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/PostHog/ai-plugin"
+    },
+    {
+      "name": "analyzing-slack-space-and-file-system-artifacts",
+      "description": "Examine file system slack space, MFT entries, USN journal, and alternate data streams to recover hidden data and reconstruct file activity on NTFS volumes.",
+      "author": {
+        "name": "mukul975"
+      },
+      "category": "security",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+        "path": "skills/analyzing-slack-space-and-file-system-artifacts",
+        "ref": "main",
+        "sha": "1b3f6b2286981381a5cc0566551ef3bb6bc38383"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+    },
+    {
       "name": "apollo",
       "description": "Prospect, enrich leads, load outreach sequences, and query sales analytics with Apollo.io — one-click MCP server integration for Claude Code and Cowork.",
       "author": {
@@ -288,6 +348,26 @@
         "sha": "a42b16918159183a0d556e305fea4d240a9e3823"
       },
       "homepage": "https://appwrite.io"
+    },
+    {
+      "name": "arxiv",
+      "description": "Search and retrieve academic papers from arXiv using their free REST API. No API key needed. Search by keyword, author, category, or ID. Combine with web_extract or the ocr-and-documents skill to read full paper content.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "skills/research/arxiv",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "name": "asana",
@@ -373,6 +453,26 @@
         "sha": "ff9618bb145f326341979ec976d7e722a7b001c0"
       },
       "homepage": "https://auth0.com"
+    },
+    {
+      "name": "autoresearch",
+      "description": "Autonomous iterative experimentation loop for any programming task. Guides the user through defining goals, measurable metrics, and scope constraints, then runs an autonomous loop of code changes, testing, measuring, and keeping/discarding results. Inspired by Karpathy's autoresearch.",
+      "author": {
+        "name": "GitHub"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/github/awesome-copilot.git",
+        "path": "skills/autoresearch",
+        "ref": "main",
+        "sha": "d0d9d9f014abb27bf0d8321851867500a3a46bba"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/github/awesome-copilot"
     },
     {
       "name": "aws-agents",
@@ -590,6 +690,86 @@
       "homepage": "https://github.com/gemini-cli-extensions/bigquery-data-analytics"
     },
     {
+      "name": "bioinformatics",
+      "description": "Gateway to 400+ bioinformatics skills from bioSkills and ClawBio. Covers genomics, transcriptomics, single-cell, variant calling, pharmacogenomics, metagenomics, structural biology, and more. Fetches domain-specific reference material on demand.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "optional-skills/research/bioinformatics",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "name": "bmad-advanced-elicitation",
+      "description": "Push the LLM to reconsider, refine, and improve its recent output. Use when user asks for deeper critique or mentions a known deeper critique method, e.g. socratic, first principles, pre-mortem, red team.",
+      "author": {
+        "name": "bmad-code-org"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD.git",
+        "path": "src/core-skills/bmad-advanced-elicitation",
+        "ref": "main",
+        "sha": "1479a58b2d604382541a184cd59105a580f4e48a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/bmad-code-org/BMAD-METHOD"
+    },
+    {
+      "name": "bmad-retrospective",
+      "description": "Post-epic review to extract lessons and assess success. Reviews a completed epic against the evidence it left behind — spec, stories, diffs, commits, sprint status — and produces a retrospective with sourced findings, action items, and an acceptance decision. Use when the user says \"run a retrospective\" or \"lets retro the epic [epic]\".",
+      "author": {
+        "name": "bmad-code-org"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD.git",
+        "path": "src/bmm-skills/ship/bmad-retrospective",
+        "ref": "main",
+        "sha": "1479a58b2d604382541a184cd59105a580f4e48a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/bmad-code-org/BMAD-METHOD"
+    },
+    {
+      "name": "bmad-review",
+      "description": "Runs one or more installed review lenses — adversarial critique, edge cases, verification gaps, structure, prose — and reports triaged findings. Use when the user asks you to review a diff, a pull request, or an artifact and actually says \"review\".",
+      "author": {
+        "name": "bmad-code-org"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD.git",
+        "path": "src/core-skills/bmad-review",
+        "ref": "main",
+        "sha": "1479a58b2d604382541a184cd59105a580f4e48a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/bmad-code-org/BMAD-METHOD"
+    },
+    {
       "name": "boltz",
       "description": "Predict structures, screen molecules and proteins, and design binders with Boltz from Claude Code.",
       "author": {
@@ -662,6 +842,26 @@
         "sha": "5bbd53d496b9dd5cd7b3e0a2d8345daa333c3f4e"
       },
       "homepage": "https://buildkite.com"
+    },
+    {
+      "name": "cancel",
+      "description": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultraqa, swarm, ultrapilot, pipeline, team).",
+      "author": {
+        "name": "Yeachan-Heo"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git",
+        "path": "skills/cancel",
+        "ref": "main",
+        "sha": "08db8be068c2d5e12c061958952715555dc6d1b0"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/Yeachan-Heo/oh-my-claudecode"
     },
     {
       "name": "canva",
@@ -1363,6 +1563,30 @@
       "homepage": "https://github.com/microsoft/Dataverse-skills"
     },
     {
+      "name": "davila7-scientific-skills",
+      "description": "Curated scientific-computing skill bundle: AlphaFold protein-structure database access, Astropy for astronomy/astrophysics, Biomni autonomous biomedical research agent, BioServices multi-database bioinformatics access, and the BRENDA enzyme database.",
+      "author": {
+        "name": "davila7"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davila7/claude-code-templates.git",
+        "path": "cli-tool/components/skills/scientific",
+        "ref": "main",
+        "sha": "a9bb1d65b2e99bcb257de49f10e539f648b74476"
+      },
+      "strict": false,
+      "skills": [
+        "./alphafold-database",
+        "./astropy",
+        "./biomni",
+        "./bioservices",
+        "./brenda-database"
+      ],
+      "homepage": "https://github.com/davila7/claude-code-templates"
+    },
+    {
       "name": "deepeval",
       "description": "Skills for adding DeepEval evaluations, tracing, datasets, Confident AI reports, and iterative improvement loops to AI applications.",
       "author": {
@@ -1592,7 +1816,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -1606,6 +1830,7 @@
       },
       "strict": false,
       "skills": [
+        "./automation-audit-ops",
         "./code-tour",
         "./codebase-onboarding",
         "./design-system",
@@ -3787,7 +4012,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, and an oral health data analyzer.",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), and binary/assembly analysis patterns.",
       "author": {
         "name": "sickn33"
       },
@@ -3801,6 +4026,12 @@
       },
       "strict": false,
       "skills": [
+        "./ai-studio-image",
+        "./astropy",
+        "./azure-ai-anomalydetector-java",
+        "./azure-monitor-opentelemetry-ts",
+        "./binary-analysis-patterns",
+        "./biopython",
         "./helium-mcp",
         "./matplotlib",
         "./monte-carlo-prevent",
