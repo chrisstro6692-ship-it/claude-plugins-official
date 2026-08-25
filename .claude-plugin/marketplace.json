@@ -1592,7 +1592,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -1613,10 +1613,15 @@
         "./eval-harness",
         "./inventory-demand-planning",
         "./iterative-retrieval",
+        "./knowledge-ops",
         "./kotlin-exposed-patterns",
+        "./perl-patterns",
         "./postgres-patterns",
         "./pytorch-patterns",
-        "./ralphinho-rfc-pipeline"
+        "./ralphinho-rfc-pipeline",
+        "./rules-distill",
+        "./search-first",
+        "./ui-demo"
       ],
       "homepage": "https://github.com/affaan-m/ECC"
     },
@@ -2291,6 +2296,26 @@
       "homepage": "https://github.com/Shopify/liquid-skills/tree/main/plugins/liquid-skills"
     },
     {
+      "name": "llm-wiki",
+      "description": "Karpathy's LLM Wiki — build and maintain a persistent, interlinked markdown knowledge base. Ingest sources, query compiled knowledge, and lint for consistency.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "skills/research/llm-wiki",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
       "name": "logfire",
       "description": "Add Logfire observability to Python applications with auto-instrumentation for FastAPI, httpx, asyncpg, SQLAlchemy, and more",
       "author": {
@@ -2474,6 +2499,26 @@
       "source": "./plugins/mcp-tunnels",
       "category": "development",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-tunnels"
+    },
+    {
+      "name": "memento-flashcards",
+      "description": "Spaced-repetition flashcard system. Create cards from facts or text, chat with flashcards using free-text answers graded by the agent, generate quizzes from YouTube transcripts, review due cards with adaptive scheduling, and export/import decks as CSV.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "optional-skills/productivity/memento-flashcards",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "name": "mercadopago",
@@ -2798,6 +2843,66 @@
         "sha": "2455514388e984b7e5a78a30e928f39d1401f16b"
       },
       "homepage": "https://github.com/NVIDIA/skills"
+    },
+    {
+      "name": "obsidian-vault-maintainer",
+      "description": "Maintain an Obsidian-friendly memory wiki vault with wikilinks, frontmatter, and official Obsidian CLI awareness.",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": "extensions/memory-wiki/skills/obsidian-vault-maintainer",
+        "ref": "main",
+        "sha": "d53ea9cf4d453a390d0244ce1c0aa2c09e18f52a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
+    },
+    {
+      "name": "office-hours",
+      "description": "YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc.",
+      "author": {
+        "name": "Garry Tan"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/garrytan/gstack.git",
+        "path": "office-hours",
+        "ref": "main",
+        "sha": "ad8400543cd9ce8d07641362db48d44a95417e33"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/garrytan/gstack"
+    },
+    {
+      "name": "openclaw-pr-maintainer",
+      "description": "Maintainer workflow for reviewing, triaging, preparing, closing, or landing OpenClaw pull requests and related issues. Use when Codex needs to validate bug-fix claims, search for related issues or PRs, apply or recommend close/reason labels, prepare GitHub comments safely, check review-thread follow-up, or perform maintainer-style PR decision making before merge or closure.",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": ".agents/skills/openclaw-pr-maintainer",
+        "ref": "main",
+        "sha": "d53ea9cf4d453a390d0244ce1c0aa2c09e18f52a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
     },
     {
       "name": "openclaw-skills",
@@ -3717,6 +3822,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator"
     },
     {
+      "name": "skill-writer",
+      "description": "Guide users through creating Agent Skills for Claude Code. Use when the user wants to create, write, author, or design a new Skill, or needs help with SKILL.md files, frontmatter, or skill structure.",
+      "author": {
+        "name": "PyTorch"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pytorch/pytorch.git",
+        "path": ".claude/skills/skill-writer",
+        "ref": "main",
+        "sha": "0303631de59c026709a7c2a90520249fb2d92d39"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://pytorch.org"
+    },
+    {
       "name": "slack",
       "description": "Slack workspace integration. Search messages, access channels, read threads, and stay connected with your team's communications while coding. Find relevant discussions and context quickly.",
       "category": "productivity",
@@ -4121,6 +4246,26 @@
       "homepage": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor"
     },
     {
+      "name": "update-skills",
+      "description": "Create or update repository skills and instructions when major learnings are discovered during a session. Use when the user says \"learn!\", when a significant pattern or pitfall is identified, or when reusable domain knowledge should be captured for future sessions.",
+      "author": {
+        "name": "Microsoft"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/vscode.git",
+        "path": "src/vs/sessions/skills/update-skills",
+        "ref": "main",
+        "sha": "c9b54fda63145e0a100aaf83086b5e485df860a2"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://code.visualstudio.com"
+    },
+    {
       "name": "valtown",
       "description": "Build and deploy on Val Town. Bundles the Val Town MCP server and platform skills (HTTP vals, cron/intervals, SQLite, email, OAuth, React UI, third-party integrations, templates).",
       "author": {
@@ -4204,6 +4349,26 @@
       "homepage": "https://villagesql.com"
     },
     {
+      "name": "wiki-maintainer",
+      "description": "Maintain the OpenClaw memory wiki vault with deterministic pages, managed blocks, and source-backed updates.",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": "extensions/memory-wiki/skills/wiki-maintainer",
+        "ref": "main",
+        "sha": "d53ea9cf4d453a390d0244ce1c0aa2c09e18f52a"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
+    },
+    {
       "name": "windsor-ai",
       "description": "Connect Claude Code to 325+ business data sources via Windsor.ai. Query marketing, sales, CRM, ecommerce, finance, and analytics data from Google Ads, Meta, HubSpot, Salesforce, Shopify, Stripe, and hundreds more — directly from your terminal.",
       "author": {
@@ -4253,6 +4418,46 @@
         "sha": "de1ed17cf03fce2b53973247361a1a47719b528c"
       },
       "homepage": "https://workos.com"
+    },
+    {
+      "name": "write-api-reference",
+      "description": "Produces API reference documentation for Next.js APIs: functions, components, file conventions, directives, and config options. Auto-activates when asked to write, create, or draft an API reference page.",
+      "author": {
+        "name": "Vercel"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vercel/next.js.git",
+        "path": ".agents/skills/write-api-reference",
+        "ref": "canary",
+        "sha": "d79b0d09cbed2a6d6a5f28680ab621e651326c30"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://nextjs.org"
+    },
+    {
+      "name": "write-guide",
+      "description": "Generates technical guides that teach real-world use cases through progressive examples. Auto-activates when asked to write, create, or draft a guide or tutorial.",
+      "author": {
+        "name": "Vercel"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vercel/next.js.git",
+        "path": ".agents/skills/write-guide",
+        "ref": "canary",
+        "sha": "d79b0d09cbed2a6d6a5f28680ab621e651326c30"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://nextjs.org"
     },
     {
       "name": "youdotcom-agent-skills",
