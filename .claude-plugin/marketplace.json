@@ -2403,7 +2403,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): evidence-backed install-plan sorting, automation inventory/overlap audits, code tours, codebase onboarding, cross-platform content distribution, DeFi AMM security review, deployment patterns and CI/CD checklists, design-system auditing, Django verification, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, operating the NanoClaw v2 REPL, correct Ethereum Keccak-256 hashing in Node.js, Perl patterns, evidence-first research ops, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): evidence-backed install-plan sorting, automation inventory/overlap audits, code tours, codebase onboarding, cross-platform content distribution, DeFi AMM security review, deployment patterns and CI/CD checklists, design-system auditing, Django verification, ECC Tools cost audits, an eval-driven-development harness, Git workflow patterns, GitHub repo operations, Go idioms, healthcare CDSS patterns and a patient-safety eval harness, knowledge-base ops, operating the NanoClaw v2 REPL, correct Ethereum Keccak-256 hashing in Node.js, Perl patterns, evidence-first research ops, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -2428,7 +2428,11 @@
         "./django-verification",
         "./ecc-tools-cost-audit",
         "./eval-harness",
+        "./git-workflow",
+        "./github-ops",
+        "./golang-patterns",
         "./healthcare-cdss-patterns",
+        "./healthcare-eval-harness",
         "./inventory-demand-planning",
         "./iterative-retrieval",
         "./knowledge-ops",
@@ -2499,6 +2503,26 @@
         "."
       ],
       "homepage": "https://github.com/NVIDIA/TensorRT-LLM"
+    },
+    {
+      "name": "executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "author": {
+        "name": "obra"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/obra/superpowers.git",
+        "path": "skills/executing-plans",
+        "ref": "main",
+        "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "explanatory-output-style",
@@ -2685,6 +2709,26 @@
       "homepage": "https://www.fullstory.com"
     },
     {
+      "name": "gh-issues",
+      "description": "Fetch GitHub issues, spawn sub-agents to implement fixes and open PRs, then monitor and address PR review comments. Usage: /gh-issues [owner/repo] [--label bug] [--limit 5] [--milestone v1.0] [--assignee @me] [--fork user/repo] [--watch] [--interval 5] [--reviews-only] [--cron] [--dry-run]",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": "skills/gh-issues",
+        "ref": "main",
+        "sha": "2a33d749e53441cb67ff1fa76c4a341d681708c1"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
+    },
+    {
       "name": "github",
       "description": "Official GitHub MCP server for repository management. Create issues, manage pull requests, review code, search repositories, and interact with GitHub's full API directly from Claude Code.",
       "category": "productivity",
@@ -2731,6 +2775,46 @@
       "category": "productivity",
       "source": "./external_plugins/gitlab",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/gitlab"
+    },
+    {
+      "name": "gitlab-ci-patterns",
+      "description": "Build GitLab CI/CD pipelines with multi-stage workflows, caching, and distributed runners for scalable automation. Use when implementing GitLab CI/CD, optimizing pipeline performance, or setting up automated testing and deployment.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/cicd-automation/skills/gitlab-ci-patterns",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
+      "name": "gitops-workflow",
+      "description": "Implement GitOps workflows with ArgoCD and Flux for automated, declarative Kubernetes deployments with continuous reconciliation. Use when implementing GitOps practices, automating Kubernetes deployments, or setting up declarative infrastructure management.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/kubernetes-operations/skills/gitops-workflow",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
     },
     {
       "name": "goplaces",
@@ -2882,6 +2966,26 @@
       "homepage": "https://growthbook.io"
     },
     {
+      "name": "gstack-upgrade",
+      "description": "Upgrade gstack to the latest version. Detects global vs vendored install, runs the upgrade, and shows what's new. Use when asked to \"upgrade gstack\", \"update gstack\", or \"get latest version\".",
+      "author": {
+        "name": "Garry Tan"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/garrytan/gstack.git",
+        "path": "gstack-upgrade",
+        "ref": "main",
+        "sha": "ad8400543cd9ce8d07641362db48d44a95417e33"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/garrytan/gstack"
+    },
+    {
       "name": "guidelines-advisor",
       "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Provides actionable recommendations.",
       "author": {
@@ -2900,6 +3004,26 @@
         "."
       ],
       "homepage": "https://github.com/trailofbits/skills"
+    },
+    {
+      "name": "helm-chart-scaffolding",
+      "description": "Design, organize, and manage Helm charts for templating and packaging Kubernetes applications with reusable configurations. Use when creating Helm charts, packaging Kubernetes applications, or implementing templated deployments.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/kubernetes-operations/skills/helm-chart-scaffolding",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
     },
     {
       "name": "honeycomb",
@@ -3009,6 +3133,46 @@
       "homepage": "https://hunter.io"
     },
     {
+      "name": "hybrid-cloud-networking",
+      "description": "Configure secure, high-performance connectivity between on-premises infrastructure and cloud platforms using VPN and dedicated connections. Use when building hybrid cloud architectures, connecting data centers to cloud, or implementing secure cross-premises networking.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/cloud-infrastructure/skills/hybrid-cloud-networking",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
+      "name": "hybrid-cloud-rpc",
+      "description": "Guide for creating, updating, and deprecating hybrid cloud RPC services in Sentry. Use when asked to \"add RPC method\", \"create RPC service\", \"hybrid cloud service\", \"new RPC model\", \"deprecate RPC method\", \"remove RPC endpoint\", \"cross-silo service\", \"cell RPC\", or \"control silo service\". Covers service scaffolding, method signatures, RPC models, cell resolvers, testing, and safe deprecation workflows.",
+      "author": {
+        "name": "Sentry"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/getsentry/sentry.git",
+        "path": ".agents/skills/hybrid-cloud-rpc",
+        "ref": "master",
+        "sha": "d30a83c8f37538397c9d9159d7c68be739063ad8"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/getsentry/sentry"
+    },
+    {
       "name": "hyperframes",
       "description": "HyperFrames by HeyGen. Write HTML, render video. Compositions, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
       "author": {
@@ -3055,6 +3219,26 @@
         "sha": "62773a7d4b8aac31545d6888fe6479be3bc53804"
       },
       "homepage": "https://github.com/intercom/claude-plugin-external"
+    },
+    {
+      "name": "istio-traffic-management",
+      "description": "Configure Istio traffic management including routing, load balancing, circuit breakers, and canary deployments. Use when implementing service mesh traffic policies, progressive delivery, or resilience patterns.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/cloud-infrastructure/skills/istio-traffic-management",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
     },
     {
       "name": "jdtls-lsp",
@@ -3114,6 +3298,46 @@
       "homepage": "https://github.com/microsoft/ai-agents-for-beginners"
     },
     {
+      "name": "k8s-manifest-generator",
+      "description": "Create production-ready Kubernetes manifests for Deployments, Services, ConfigMaps, and Secrets following best practices and security standards. Use when generating Kubernetes YAML manifests, creating K8s resources, or implementing production-grade Kubernetes configurations.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/kubernetes-operations/skills/k8s-manifest-generator",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
+      "name": "k8s-security-policies",
+      "description": "Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enforcing pod security standards.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "security",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/kubernetes-operations/skills/k8s-security-policies",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
       "name": "knowledge-catalog",
       "description": "Connect to Knowledge Catalog to discover, manage, monitor, and govern data and AI artifacts across your data platform",
       "author": {
@@ -3151,6 +3375,26 @@
           "startupTimeout": 120000
         }
       }
+    },
+    {
+      "name": "land-and-deploy",
+      "description": "Land and deploy workflow. Merges the PR, waits for CI and deploy, verifies production health via canary checks. Takes over after /ship creates the PR.",
+      "author": {
+        "name": "Garry Tan"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/garrytan/gstack.git",
+        "path": "land-and-deploy",
+        "ref": "main",
+        "sha": "ad8400543cd9ce8d07641362db48d44a95417e33"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/garrytan/gstack"
     },
     {
       "name": "langfuse-observability",
@@ -3263,6 +3507,26 @@
       "category": "productivity",
       "source": "./external_plugins/linear",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/linear"
+    },
+    {
+      "name": "linkerd-patterns",
+      "description": "Implement Linkerd service mesh patterns for lightweight, security-focused service mesh deployments. Use when setting up Linkerd, configuring traffic policies, or implementing zero-trust networking with minimal overhead.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/cloud-infrastructure/skills/linkerd-patterns",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
     },
     {
       "name": "liquid-lsp",
@@ -3540,6 +3804,26 @@
         "."
       ],
       "homepage": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "name": "mempalace-init",
+      "description": "Initialize a new MemPalace — guided setup for your AI memory palace with ChromaDB backend.",
+      "author": {
+        "name": "MemPalace"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MemPalace/mempalace.git",
+        "path": ".codex-plugin/skills/init",
+        "ref": "develop",
+        "sha": "fae7de0fce97f18a5eb8b81d711f6d0422b7acbc"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/MemPalace/mempalace"
     },
     {
       "name": "mempalace-mine",
@@ -4928,7 +5212,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills spanning data visualization, bioinformatics, security, Web3, and infrastructure: Helium MCP, Matplotlib/Plotly, Monte Carlo data observability, health data analyzers, Astropy/Biopython, Azure AI/Key Vault/Monitor OpenTelemetry SDKs (Java/Python/.NET), binary analysis, Cirq, citation management, computer vision, Conductor validation, data-scientist and MLOps-engineer personas, database-migration and FDA/SaMD compliance, distributed tracing with Jaeger/Tempo, Hugging Face Trackio, performance engineering, quality nonconformance, Scanpy, superpowers lab, vector-database engineering, psychometric matching, LLM app patterns, Makepad, NFT standards, a security auditor, Solidity security, Telegram Mini Apps, Web3 testing, a '007' security-audit persona, blockchain/DeFi development and protocol templates, gRPC in Go, Flutter, an EmblemAI crypto wallet, and Bitcoin Lightning channel-factory analysis.",
+      "description": "Curated bundle of agentic skills spanning data visualization, bioinformatics, security, Web3, Kubernetes, and infrastructure: Helium MCP, Matplotlib/Plotly, Monte Carlo data observability, health data analyzers, Astropy/Biopython, Azure AI/Key Vault/Monitor OpenTelemetry SDKs, binary analysis, Cirq, citation management, computer vision, Conductor validation, data-scientist and MLOps-engineer personas, database-migration and FDA/SaMD compliance, distributed tracing, Hugging Face Trackio, performance engineering, quality nonconformance, Scanpy, superpowers lab, vector-database engineering, psychometric matching, LLM app patterns, Makepad, NFT standards, a security auditor, Solidity security, Telegram Mini Apps, Web3 testing, a '007' security-audit persona, blockchain/DeFi development and protocol templates, gRPC in Go, Flutter, an EmblemAI crypto wallet, Bitcoin Lightning channel-factory analysis, Helm chart scaffolding, Kubernetes manifest generation and security policies, a Kubernetes deployment workflow, and the Manifest observability plugin.",
       "author": {
         "name": "sickn33"
       },
@@ -4967,12 +5251,17 @@
         "./flutter-expert",
         "./grpc-golang",
         "./helium-mcp",
+        "./helm-chart-scaffolding",
         "./hugging-face-trackio",
+        "./k8s-manifest-generator",
+        "./k8s-security-policies",
+        "./kubernetes-deployment",
         "./lightning-architecture-review",
         "./lightning-factory-explainer",
         "./llm-app-patterns",
         "./makepad-platform",
         "./makepad-widgets",
+        "./manifest",
         "./matplotlib",
         "./mlops-engineer",
         "./monte-carlo-prevent",
