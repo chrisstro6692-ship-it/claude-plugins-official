@@ -1645,7 +1645,7 @@
     },
     {
       "name": "davila7-scientific-skills",
-      "description": "Curated scientific-computing skill bundle covering protein/molecular biology databases (AlphaFold, DrugBank, ENA, Ensembl, Gene, GEO, GWAS, HMDB, KEGG, ClinicalTrials.gov, ClinPGx, ClinVar, COSMIC), astronomy (Astropy), quantum computing (Cirq), single-cell (CELLxGENE Census), metabolic modeling (COBRApy), molecular ML (DeepChem, ESM protein language models, molfeat featurization), NGS visualization (deepTools), molecular docking (DiffDock), biomedical data management (LaminDB), cloud genomics (DNAnexus), and autonomous biomedical research (Biomni, BioServices, BRENDA).",
+      "description": "Curated scientific-computing skill bundle covering molecular and structural biology databases (AlphaFold, DrugBank, ENA, Ensembl, Gene, GEO, GWAS, HMDB, KEGG, PDB, PubChem, Reactome, ClinicalTrials.gov, ClinPGx, ClinVar, COSMIC, OpenTargets), literature search (OpenAlex, PubMed), astronomy (Astropy), quantum computing (Cirq, QuTiP), single-cell and neural data (CELLxGENE Census, Neuropixels), metabolic modeling (COBRApy), cheminformatics and molecular ML (DeepChem, ESM, molfeat, RDKit, PyTDC), NGS/genomics processing (deepTools, pysam, PyDESeq2), materials science (pymatgen), computational pathology (PathML), healthcare AI (PyHealth), network analysis (NetworkX), molecular docking (DiffDock), biomedical data management (LaminDB), cloud genomics (DNAnexus), and autonomous biomedical research (Biomni, BioServices, BRENDA).",
       "author": {
         "name": "davila7"
       },
@@ -1686,7 +1686,23 @@
         "./hmdb-database",
         "./kegg-database",
         "./lamindb",
-        "./molfeat"
+        "./molfeat",
+        "./networkx",
+        "./neuropixels-analysis",
+        "./openalex-database",
+        "./opentargets-database",
+        "./pathml",
+        "./pdb-database",
+        "./pubchem-database",
+        "./pubmed-database",
+        "./pydeseq2",
+        "./pyhealth",
+        "./pymatgen",
+        "./pysam",
+        "./pytdc",
+        "./qutip",
+        "./rdkit",
+        "./reactome-database"
       ],
       "homepage": "https://github.com/davila7/claude-code-templates"
     },
@@ -1960,7 +1976,7 @@
     },
     {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, Perl patterns, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, operating the NanoClaw v2 REPL, Perl patterns, evidence-first research ops, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -1985,10 +2001,12 @@
         "./iterative-retrieval",
         "./knowledge-ops",
         "./kotlin-exposed-patterns",
+        "./nanoclaw-repl",
         "./perl-patterns",
         "./postgres-patterns",
         "./pytorch-patterns",
         "./ralphinho-rfc-pipeline",
+        "./research-ops",
         "./rules-distill",
         "./search-first",
         "./ui-demo"
@@ -3128,6 +3146,26 @@
       "homepage": "https://www.mongodb.com/docs/mcp-server/get-started/"
     },
     {
+      "name": "mood-tracker",
+      "description": "A simple mood tracking skill that stores your daily mood and comments. Use this when the user wants to log their mood, track how they feel, or see their mood history.",
+      "author": {
+        "name": "Google AI Edge"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/google-ai-edge/gallery.git",
+        "path": "skills/built-in/mood-tracker",
+        "ref": "main",
+        "sha": "ec7fee19e3b7aad9991105e549d544233ea0b97f"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/google-ai-edge/gallery"
+    },
+    {
       "name": "multi-reviewer-patterns",
       "description": "Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Use this skill when organizing multi-reviewer code reviews, calibrating finding severity, or consolidating review results.",
       "author": {
@@ -3646,6 +3684,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/pr-review-toolkit"
     },
     {
+      "name": "pre-publish-review",
+      "description": "Nuclear-grade 16-agent pre-publish release gate. Runs /get-unpublished-changes to detect all changes since last npm release, spawns up to 10 ultrabrain agents for deep per-change analysis, invokes /review-work (5 agents) for holistic review, and 1 oracle for overall release synthesis. Use before EVERY npm publish.",
+      "author": {
+        "name": "code-yeongyu"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent.git",
+        "path": ".opencode/skills/pre-publish-review",
+        "ref": "dev",
+        "sha": "a9de94741e2e18cd2eb3a3b56d7d033d8a222e9c"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/code-yeongyu/oh-my-openagent"
+    },
+    {
       "name": "preset-cli-skills",
       "description": "Preset CLI skills for explicit shell, scripting, and CI/CD workflows driven by the `sup` CLI (PyPI package `superset-sup`). Use only for CLI workflows; do not use for MCP-only work or as a substitute for direct API calls when the user wants HTTP/SDK code.",
       "author": {
@@ -3752,6 +3810,26 @@
         "sha": "15b556ae9b7dc3aa960d14a69ed82ec427305487"
       },
       "homepage": "https://skills.qdrant.tech"
+    },
+    {
+      "name": "qmd",
+      "description": "Search personal knowledge bases, notes, docs, and meeting transcripts locally using qmd — a hybrid retrieval engine with BM25, vector search, and LLM reranking. Supports CLI and MCP integration.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "optional-skills/research/qmd",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "name": "qodo",
@@ -4237,7 +4315,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, and an MLOps-engineer persona.",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, an MLOps-engineer persona, a performance-engineering expert, manufacturing quality-nonconformance workflows, and Scanpy single-cell RNA-seq analysis.",
       "author": {
         "name": "sickn33"
       },
@@ -4271,7 +4349,10 @@
         "./monte-carlo-prevent",
         "./monte-carlo-validation-notebook",
         "./oral-health-analyzer",
-        "./plotly"
+        "./performance-engineer",
+        "./plotly",
+        "./quality-nonconformance",
+        "./scanpy"
       ],
       "homepage": "https://github.com/sickn33/agentic-awesome-skills"
     },
