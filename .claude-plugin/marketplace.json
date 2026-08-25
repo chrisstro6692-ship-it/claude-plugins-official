@@ -1645,7 +1645,7 @@
     },
     {
       "name": "davila7-scientific-skills",
-      "description": "Curated scientific-computing skill bundle covering molecular and structural biology databases (AlphaFold, DrugBank, ENA, Ensembl, Gene, GEO, GWAS, HMDB, KEGG, PDB, PubChem, Reactome, ClinicalTrials.gov, ClinPGx, ClinVar, COSMIC, OpenTargets), literature search (OpenAlex, PubMed), astronomy (Astropy), quantum computing (Cirq, QuTiP), single-cell and neural data (CELLxGENE Census, Neuropixels), metabolic modeling (COBRApy), cheminformatics and molecular ML (DeepChem, ESM, molfeat, RDKit, PyTDC), NGS/genomics processing (deepTools, pysam, PyDESeq2), materials science (pymatgen), computational pathology (PathML), healthcare AI (PyHealth), network analysis (NetworkX), molecular docking (DiffDock), biomedical data management (LaminDB), cloud genomics (DNAnexus), and autonomous biomedical research (Biomni, BioServices, BRENDA).",
+      "description": "Curated scientific-computing skill bundle covering molecular and structural biology databases (AlphaFold, DrugBank, ENA, Ensembl, Gene, GEO, GWAS, HMDB, KEGG, PDB, PubChem, Reactome, STRING, ZINC, ClinicalTrials.gov, ClinPGx, ClinVar, COSMIC, OpenTargets, Metabolomics Workbench, USPTO), literature search and writing (OpenAlex, PubMed, scientific manuscript writing, statistical analysis), astronomy (Astropy), quantum computing (Cirq, QuTiP), single-cell and neural data (CELLxGENE Census, Neuropixels, scvi-tools), metabolic modeling (COBRApy), cheminformatics and molecular ML (DeepChem, ESM, molfeat, RDKit, PyTDC), NGS/genomics processing (deepTools, pysam, PyDESeq2), materials science (pymatgen), computational pathology (PathML), healthcare AI (PyHealth), network analysis (NetworkX), molecular docking (DiffDock), biomedical data management (LaminDB), cloud genomics (DNAnexus), and autonomous biomedical research (Biomni, BioServices, BRENDA).",
       "author": {
         "name": "davila7"
       },
@@ -1686,6 +1686,7 @@
         "./hmdb-database",
         "./kegg-database",
         "./lamindb",
+        "./metabolomics-workbench-database",
         "./molfeat",
         "./networkx",
         "./neuropixels-analysis",
@@ -1702,7 +1703,13 @@
         "./pytdc",
         "./qutip",
         "./rdkit",
-        "./reactome-database"
+        "./reactome-database",
+        "./scientific-writing",
+        "./scvi-tools",
+        "./statistical-analysis",
+        "./string-database",
+        "./uspto-database",
+        "./zinc-database"
       ],
       "homepage": "https://github.com/davila7/claude-code-templates"
     },
@@ -2987,6 +2994,26 @@
         "."
       ],
       "homepage": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "name": "mempalace-search",
+      "description": "Search your MemPalace — semantic search across all mined memories, projects, and conversations.",
+      "author": {
+        "name": "MemPalace"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MemPalace/mempalace.git",
+        "path": ".codex-plugin/skills/search",
+        "ref": "develop",
+        "sha": "fae7de0fce97f18a5eb8b81d711f6d0422b7acbc"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/MemPalace/mempalace"
     },
     {
       "name": "mercadopago",
@@ -4315,7 +4342,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, an MLOps-engineer persona, a performance-engineering expert, manufacturing quality-nonconformance workflows, and Scanpy single-cell RNA-seq analysis.",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, an MLOps-engineer persona, a performance-engineering expert, manufacturing quality-nonconformance workflows, Scanpy single-cell RNA-seq analysis, a skin-health data analyzer, an experimental Claude-superpowers lab, a vector-database engineer persona, and psychometric compatibility matching.",
       "author": {
         "name": "sickn33"
       },
@@ -4352,7 +4379,11 @@
         "./performance-engineer",
         "./plotly",
         "./quality-nonconformance",
-        "./scanpy"
+        "./scanpy",
+        "./skin-health-analyzer",
+        "./superpowers-lab",
+        "./vector-database-engineer",
+        "./viboscope"
       ],
       "homepage": "https://github.com/sickn33/agentic-awesome-skills"
     },
@@ -4388,6 +4419,26 @@
       "homepage": "https://pytorch.org"
     },
     {
+      "name": "skip-test-with-issue",
+      "description": "Skip a flaky or broken test with proper issue tracking. Use when asked to skip a test, disable a test, or mark a test as flaky.",
+      "author": {
+        "name": "CockroachDB"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cockroachdb/cockroach.git",
+        "path": ".claude/skills/skip-test-with-issue",
+        "ref": "master",
+        "sha": "8812064a015d2faf99d3fc7e15880f94042954b0"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/cockroachdb/cockroach"
+    },
+    {
       "name": "slack",
       "description": "Slack workspace integration. Search messages, access channels, read threads, and stay connected with your team's communications while coding. Find relevant discussions and context quickly.",
       "category": "productivity",
@@ -4397,6 +4448,26 @@
         "sha": "73df00b6f399e18342cb6742042fc83f1bee8a69"
       },
       "homepage": "https://github.com/slackapi/slack-mcp-plugin/tree/main"
+    },
+    {
+      "name": "smart-explore",
+      "description": "Token-optimized structural code search using tree-sitter AST parsing. Use instead of reading full files when you need to understand code structure, find functions, or explore a codebase efficiently.",
+      "author": {
+        "name": "thedotmack"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thedotmack/claude-mem.git",
+        "path": "plugin/skills/smart-explore",
+        "ref": "main",
+        "sha": "e2d1df569a8f04075d40e92461128ece7cf04c82"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/thedotmack/claude-mem"
     },
     {
       "name": "snowflake-cortex-code",
@@ -4605,6 +4676,26 @@
       "homepage": "https://synthflow.ai"
     },
     {
+      "name": "systematic-literature-review",
+      "description": "Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and cross-paper comparisons. Searches arXiv and outputs reports in APA, IEEE, or BibTeX format. Not for single-paper tasks — use academic-paper-review for reviewing one paper.",
+      "author": {
+        "name": "ByteDance"
+      },
+      "category": "learning",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bytedance/deer-flow.git",
+        "path": "skills/public/systematic-literature-review",
+        "ref": "main",
+        "sha": "788a890bd022689ef293e6bbfa2c12988173db6c"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/bytedance/deer-flow"
+    },
+    {
       "name": "tavily",
       "description": "Build AI applications with real-time web data using Tavily's search, extract, crawl, and research APIs.",
       "author": {
@@ -4648,6 +4739,26 @@
       "category": "development",
       "source": "./external_plugins/terraform",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/terraform"
+    },
+    {
+      "name": "tidb-integrationtest-recorder",
+      "description": "Use when recording TiDB integration tests under tests/integrationtest and verifying regenerated result files stay minimal and correct.",
+      "author": {
+        "name": "PingCAP"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pingcap/tidb.git",
+        "path": ".agents/skills/tidb-integrationtest-recorder",
+        "ref": "master",
+        "sha": "0419c93284fb3cf1b08630ba3837b5f9df4c5c5d"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/pingcap/tidb"
     },
     {
       "name": "togetherai-skills",
