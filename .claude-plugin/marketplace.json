@@ -956,6 +956,106 @@
       "homepage": "https://catalyst.zoho.com/"
     },
     {
+      "name": "ccxt-csharp",
+      "description": "CCXT cryptocurrency exchange library for C# and .NET developers. Covers both REST API (standard) and WebSocket API (real-time). Helps install CCXT, connect to exchanges, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors in .NET projects. Supports .NET Standard 2.0+.",
+      "author": {
+        "name": "CCXT"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ccxt/ccxt.git",
+        "path": ".claude/skills/ccxt-csharp",
+        "ref": "master",
+        "sha": "9205a187ddebec5887a139316a47bad1b959fe61"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/ccxt/ccxt"
+    },
+    {
+      "name": "ccxt-go",
+      "description": "CCXT cryptocurrency exchange library for Go developers. Covers both REST API (standard) and WebSocket API (real-time). Helps install CCXT, connect to exchanges, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors in Go projects.",
+      "author": {
+        "name": "CCXT"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ccxt/ccxt.git",
+        "path": ".claude/skills/ccxt-go",
+        "ref": "master",
+        "sha": "9205a187ddebec5887a139316a47bad1b959fe61"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/ccxt/ccxt"
+    },
+    {
+      "name": "ccxt-php",
+      "description": "CCXT cryptocurrency exchange library for PHP developers. Covers both REST API (standard) and WebSocket API (real-time). Helps install CCXT, connect to exchanges, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors in PHP 8.1+. Supports both sync and async (ReactPHP) usage.",
+      "author": {
+        "name": "CCXT"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ccxt/ccxt.git",
+        "path": ".claude/skills/ccxt-php",
+        "ref": "master",
+        "sha": "9205a187ddebec5887a139316a47bad1b959fe61"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/ccxt/ccxt"
+    },
+    {
+      "name": "ccxt-python",
+      "description": "CCXT cryptocurrency exchange library for Python developers. Covers both REST API (standard) and WebSocket API (real-time). Helps install CCXT, connect to exchanges, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors in Python. Supports both sync and async (asyncio) usage.",
+      "author": {
+        "name": "CCXT"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ccxt/ccxt.git",
+        "path": ".claude/skills/ccxt-python",
+        "ref": "master",
+        "sha": "9205a187ddebec5887a139316a47bad1b959fe61"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/ccxt/ccxt"
+    },
+    {
+      "name": "ccxt-typescript",
+      "description": "CCXT cryptocurrency exchange library for TypeScript and JavaScript developers (Node.js and browser). Covers both REST API (standard) and WebSocket API (real-time). Helps install CCXT, connect to exchanges, fetch market data, place orders, stream live tickers/orderbooks, handle authentication, and manage errors. Includes both REST and WebSocket examples.",
+      "author": {
+        "name": "CCXT"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ccxt/ccxt.git",
+        "path": ".claude/skills/ccxt-typescript",
+        "ref": "master",
+        "sha": "9205a187ddebec5887a139316a47bad1b959fe61"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/ccxt/ccxt"
+    },
+    {
       "name": "cds-mcp",
       "description": "AI-assisted development of SAP Cloud Application Programming Model (CAP) projects. Search CDS models and CAP documentation.",
       "author": {
@@ -1086,6 +1186,26 @@
       "source": "./plugins/claude-security",
       "category": "security",
       "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security"
+    },
+    {
+      "name": "cli-anything-eth2-quickstart",
+      "description": "Use eth2-quickstart to autonomously deploy a hardened Ethereum node, install execution and consensus clients, configure validator metadata, expose RPC safely, and inspect node health with structured JSON output.",
+      "author": {
+        "name": "HKUDS"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/HKUDS/CLI-Anything.git",
+        "path": "skills/cli-anything-eth2-quickstart",
+        "ref": "main",
+        "sha": "810c18b0d1ab9b234bc996c9fd999318523a3ef0"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/HKUDS/CLI-Anything"
     },
     {
       "name": "cli-anything-notebooklm",
@@ -1729,6 +1849,26 @@
       "homepage": "https://github.com/confident-ai/deepeval"
     },
     {
+      "name": "defi-protocol-templates",
+      "description": "Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and flash loans. Use when building decentralized finance applications or smart contract protocols.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/blockchain-web3/skills/defi-protocol-templates",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
       "name": "deploy-on-aws",
       "description": "Deploy applications to AWS with architecture recommendations, cost estimates, and IaC deployment.",
       "category": "deployment",
@@ -1982,8 +2122,28 @@
       "homepage": "https://duendesoftware.com"
     },
     {
+      "name": "electric-deployment",
+      "description": "Deploy Electric via Docker, Docker Compose, or Electric Cloud. Covers DATABASE_URL, ELECTRIC_SECRET, ELECTRIC_INSECURE for dev, wal_level=logical, max_replication_slots, storage persistence, pooled queries, IPv6, Kubernetes readiness probes, replication slot cleanup, and Postgres v14+ requirements.",
+      "author": {
+        "name": "Electric SQL"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/electric-sql/electric.git",
+        "path": "packages/typescript-client/skills/electric-deployment",
+        "ref": "main",
+        "sha": "dc07a1e6c8ff459b59ce407cdb6bf2f7fd068f36"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/electric-sql/electric"
+    },
+    {
       "name": "everything-claude-code",
-      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, operating the NanoClaw v2 REPL, correct Ethereum Keccak-256 hashing in Node.js, Perl patterns, evidence-first research ops, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): automation inventory/overlap audits, code tours, codebase onboarding, DeFi AMM security review, design-system auditing, ECC Tools cost audits, an eval-driven-development harness, healthcare CDSS patterns, knowledge-base ops, operating the NanoClaw v2 REPL, correct Ethereum Keccak-256 hashing in Node.js, Perl patterns, evidence-first research ops, cross-skill rule distillation, a search-before-coding workflow, UI demo recording, inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
       "author": {
         "name": "affaan-m"
       },
@@ -2000,6 +2160,7 @@
         "./automation-audit-ops",
         "./code-tour",
         "./codebase-onboarding",
+        "./defi-amm-security",
         "./design-system",
         "./ecc-tools-cost-audit",
         "./eval-harness",
@@ -2054,6 +2215,26 @@
         "sha": "394f9210ed16d3e25d328e1e6db285824caedc04"
       },
       "homepage": "https://exa.ai/docs/reference/exa-mcp"
+    },
+    {
+      "name": "exec-slurm-compile",
+      "description": "Compile TensorRT-LLM on a SLURM cluster. Covers submitting a batch job with a container image, monitoring the job, and verifying the build. Use when the user wants to compile TRT-LLM remotely via SLURM rather than on a local compute node.",
+      "author": {
+        "name": "NVIDIA"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM.git",
+        "path": ".claude/skills/exec-slurm-compile",
+        "ref": "main",
+        "sha": "1d4a71f750203e0fab4c7b4184aed8d570602281"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NVIDIA/TensorRT-LLM"
     },
     {
       "name": "explanatory-output-style",
@@ -2114,6 +2295,26 @@
         "sha": "f6dc3106d928312818b0252272c68d62a74644f7"
       },
       "homepage": "https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md"
+    },
+    {
+      "name": "feature-contract",
+      "description": "Generate a structured implementation contract before making any code changes to FastLED. Defines scope, affected files, API changes, platform impact, risk assessment, and test plan. Use before implementing any feature, bug fix, driver addition, or refactoring.",
+      "author": {
+        "name": "FastLED"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/FastLED/FastLED.git",
+        "path": ".claude/skills/feature-contract",
+        "ref": "master",
+        "sha": "0f2db1334bc7a4571a5775b16e1f814a5e7596e5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/FastLED/FastLED"
     },
     {
       "name": "feature-dev",
@@ -2417,6 +2618,26 @@
       "homepage": "https://growthbook.io"
     },
     {
+      "name": "guidelines-advisor",
+      "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Provides actionable recommendations.",
+      "author": {
+        "name": "Trail of Bits"
+      },
+      "category": "security",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/building-secure-contracts/skills/guidelines-advisor",
+        "ref": "main",
+        "sha": "8c1b2670bf8cc26b9178ebb199b2613153b6f483"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/trailofbits/skills"
+    },
+    {
       "name": "honeycomb",
       "description": "Skills, agents, and workflows for Honeycomb observability — query patterns, production investigations, SLOs, OpenTelemetry instrumentation, and Beeline migration. Designed to complement the Honeycomb MCP server.",
       "author": {
@@ -2689,6 +2910,26 @@
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/laravel-boost"
     },
     {
+      "name": "launch-checklist",
+      "description": "Complete launch readiness validation covering every department: code, content, store, marketing, community, infrastructure, legal, and go/no-go sign-offs.",
+      "author": {
+        "name": "Donchitos"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Donchitos/Claude-Code-Game-Studios.git",
+        "path": ".claude/skills/launch-checklist",
+        "ref": "main",
+        "sha": "984023ddac0d5e27624f2baacde6105e45de375f"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/Donchitos/Claude-Code-Game-Studios"
+    },
+    {
       "name": "learn-with-coursera",
       "description": "Turn any learning intent into a personalized Coursera experience. Asks three quick questions (topic, familiarity, preferred format), searches Coursera's catalog, and delivers the right next step — a course, hands-on project, short video, or live roleplay — then maps a path forward. Requires the Coursera connector for catalog tools.",
       "author": {
@@ -2731,6 +2972,26 @@
         "sha": "f9fd8a0ca6e1421bc1aacb113a109663a7a6f6d8"
       },
       "homepage": "https://www.legalzoom.com/"
+    },
+    {
+      "name": "libafl",
+      "description": "LibAFL is a modular fuzzing library for building custom fuzzers. Use for advanced fuzzing needs, custom mutators, or non-standard fuzzing targets.",
+      "author": {
+        "name": "Trail of Bits"
+      },
+      "category": "testing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/testing-handbook-skills/skills/libafl",
+        "ref": "main",
+        "sha": "8c1b2670bf8cc26b9178ebb199b2613153b6f483"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/trailofbits/skills"
     },
     {
       "name": "linear",
@@ -2953,6 +3214,26 @@
         "sha": "fa1274490873f869c9a084e1abb9cf3031d288c7"
       },
       "homepage": "https://modelcontextprotocol.io"
+    },
+    {
+      "name": "mcp-apps-builder",
+      "description": "Build, modify, debug, migrate, review, or verify TypeScript MCP servers and MCP Apps with mcp-use. Use for tools, resources, prompts, middleware, Views, authentication, Skills over MCP, scaffolding, and advanced features.",
+      "author": {
+        "name": "mcp-use"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mcp-use/mcp-use.git",
+        "path": "skills/mcp-apps-builder",
+        "ref": "main",
+        "sha": "b09401a90e1bd821db61297cd312e9169cd35858"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/mcp-use/mcp-use"
     },
     {
       "name": "mcp-server-dev",
@@ -4383,7 +4664,7 @@
     },
     {
       "name": "sickn33-skills",
-      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, an oral health data analyzer, humanized AI Studio image generation, Astropy and Biopython, Azure AI Anomaly Detector (Java) and Azure Monitor OpenTelemetry (TS), binary/assembly analysis patterns, Cirq quantum computing, citation management, a computer-vision expert, a Conductor project validator, a data-scientist persona, database-migration observability, FDA/SaMD medtech compliance auditing, Hugging Face Trackio experiment tracking, an MLOps-engineer persona, a performance-engineering expert, manufacturing quality-nonconformance workflows, Scanpy single-cell RNA-seq analysis, a skin-health data analyzer, an experimental Claude-superpowers lab, a vector-database engineer persona, psychometric compatibility matching, LLM application patterns, Makepad cross-platform and widget development, NFT standards, a security auditor, Solidity smart-contract security, Telegram Mini Apps, and Web3 testing with Hardhat/Foundry.",
+      "description": "Curated bundle of agentic skills spanning data visualization, bioinformatics, security, Web3, and infrastructure: Helium MCP, Matplotlib/Plotly, Monte Carlo data observability, health data analyzers, Astropy/Biopython, Azure AI/Key Vault SDKs, binary analysis, Cirq, citation management, computer vision, Conductor validation, data-scientist and MLOps-engineer personas, database-migration and FDA/SaMD compliance, Hugging Face Trackio, performance engineering, quality nonconformance, Scanpy, superpowers lab, vector-database engineering, psychometric matching, LLM app patterns, Makepad, NFT standards, a security auditor, Solidity security, Telegram Mini Apps, Web3 testing, a '007' security-audit persona, blockchain/DeFi development and protocol templates, gRPC in Go, Flutter, an EmblemAI crypto wallet, and Bitcoin Lightning channel-factory analysis.",
       "author": {
         "name": "sickn33"
       },
@@ -4397,21 +4678,30 @@
       },
       "strict": false,
       "skills": [
+        "./007",
         "./ai-studio-image",
         "./astropy",
         "./azure-ai-anomalydetector-java",
         "./azure-monitor-opentelemetry-ts",
+        "./azure-security-keyvault-keys-dotnet",
         "./binary-analysis-patterns",
         "./biopython",
+        "./blockchain-developer",
         "./cirq",
         "./citation-management",
         "./computer-vision-expert",
         "./conductor-validator",
         "./data-scientist",
         "./database-migrations-migration-observability",
+        "./defi-protocol-templates",
+        "./emblemai-crypto-wallet",
         "./fda-medtech-compliance-auditor",
+        "./flutter-expert",
+        "./grpc-golang",
         "./helium-mcp",
         "./hugging-face-trackio",
+        "./lightning-architecture-review",
+        "./lightning-factory-explainer",
         "./llm-app-patterns",
         "./makepad-platform",
         "./makepad-widgets",
