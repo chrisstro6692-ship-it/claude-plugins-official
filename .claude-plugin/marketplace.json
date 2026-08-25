@@ -1451,6 +1451,31 @@
       "homepage": "https://duendesoftware.com"
     },
     {
+      "name": "everything-claude-code",
+      "description": "Curated skill bundle from Everything Claude Code (ECC): inventory demand planning, iterative retrieval, Kotlin Exposed ORM patterns, PostgreSQL patterns, PyTorch patterns, and the Ralphinho RFC-driven multi-agent pipeline.",
+      "author": {
+        "name": "affaan-m"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/affaan-m/ECC.git",
+        "path": "skills",
+        "ref": "main",
+        "sha": "d8409a4b0813771235555e32e3d8046a73988bfa"
+      },
+      "strict": false,
+      "skills": [
+        "./inventory-demand-planning",
+        "./iterative-retrieval",
+        "./kotlin-exposed-patterns",
+        "./postgres-patterns",
+        "./pytorch-patterns",
+        "./ralphinho-rfc-pipeline"
+      ],
+      "homepage": "https://github.com/affaan-m/ECC"
+    },
+    {
       "name": "exa",
       "description": "Exa AI web search, deep research, and content extraction. Provides MCP tools and research skills for comprehensive web search, people discovery, company research, academic papers, and more.",
       "author": {
@@ -1689,6 +1714,26 @@
       "homepage": "https://grafana.com"
     },
     {
+      "name": "grafana-dashboards",
+      "description": "Create and manage production Grafana dashboards for real-time visualization of system and application metrics. Use when building monitoring dashboards, visualizing metrics, or creating operational observability interfaces.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "monitoring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/observability-monitoring/skills/grafana-dashboards",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
       "name": "grafana-mcp",
       "description": "MCP server for AI-assisted Grafana dashboard, datasource, alerting, and incident management.",
       "author": {
@@ -1766,6 +1811,26 @@
         "sha": "10259650b82ceee43741ce2f8a7fa564a8c286c7"
       },
       "homepage": "https://www.hostinger.com"
+    },
+    {
+      "name": "huggingface-hub",
+      "description": "Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.",
+      "author": {
+        "name": "NousResearch"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NousResearch/hermes-agent.git",
+        "path": "skills/mlops/huggingface-hub",
+        "ref": "main",
+        "sha": "1bbb6e5bce56e721ab685af4cd87df21bbff4d35"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/NousResearch/hermes-agent"
     },
     {
       "name": "huggingface-skills",
@@ -2363,6 +2428,46 @@
       "homepage": "https://www.mongodb.com/docs/mcp-server/get-started/"
     },
     {
+      "name": "multi-reviewer-patterns",
+      "description": "Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Use this skill when organizing multi-reviewer code reviews, calibrating finding severity, or consolidating review results.",
+      "author": {
+        "name": "wshobson"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wshobson/agents.git",
+        "path": "plugins/agent-teams/skills/multi-reviewer-patterns",
+        "ref": "main",
+        "sha": "d82998e7df393c671ede2387a8435075f0b633f5"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/wshobson/agents"
+    },
+    {
+      "name": "nanobot-memory",
+      "description": "Two-layer memory system with Dream-managed knowledge files for nanobot agents — search conversation history and consolidated long-term profile and memory files.",
+      "author": {
+        "name": "HKUDS"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/HKUDS/nanobot.git",
+        "path": "nanobot/skills/memory",
+        "ref": "main",
+        "sha": "649e3958c58bbf12342d2b254f3c40dea4d42f07"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/HKUDS/nanobot"
+    },
+    {
       "name": "neon",
       "description": "Manage your Neon projects and databases with the neon-postgres agent skill and the Neon MCP Server.",
       "category": "database",
@@ -2490,6 +2595,28 @@
       "homepage": "https://github.com/NVIDIA/skills"
     },
     {
+      "name": "openclaw-skills",
+      "description": "Utility skills from OpenClaw: summarize CodexBar per-model usage costs, and transcribe audio via local Whisper CLI or the OpenAI Audio Transcriptions API.",
+      "author": {
+        "name": "openclaw"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": "skills",
+        "ref": "main",
+        "sha": "ebf79b4c368005abfe8559c194252a15bdf785c1"
+      },
+      "strict": false,
+      "skills": [
+        "./model-usage",
+        "./openai-whisper",
+        "./openai-whisper-api"
+      ],
+      "homepage": "https://github.com/openclaw/openclaw"
+    },
+    {
       "name": "oracle-ai-data-platform-workbench-databricks-migrator",
       "description": "Drive the Oracle AI Data Platform (AIDP) Databricks Migration Toolkit in natural language. Plans and executes automated Databricks → AIDP migrations of notebooks, jobs, schedules, and catalog DDL — Pass-1 dependency rewrite + Pass-2 cell-by-cell execute/verify/fix on a live AIDP cluster with Claude.",
       "author": {
@@ -2591,6 +2718,27 @@
         "sha": "725fa65b3135c274e06e90d4368686677fba0e5d"
       },
       "homepage": "https://developer.paypal.com/"
+    },
+    {
+      "name": "phaser-skills",
+      "description": "Phaser 4 game development skills covering visual filters and post-processing effects (bloom, blur, glow, shaders) and math/geometry utilities (vectors, shapes, distance, interpolation).",
+      "author": {
+        "name": "Phaser"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/phaserjs/phaser.git",
+        "path": "skills",
+        "ref": "master",
+        "sha": "02d8931b626d9764c133cbb3fbf99966c03c757c"
+      },
+      "strict": false,
+      "skills": [
+        "./filters-and-postfx",
+        "./geometry-and-math"
+      ],
+      "homepage": "https://phaser.io"
     },
     {
       "name": "php-lsp",
@@ -2773,6 +2921,26 @@
       "source": "./plugins/project-artifact",
       "category": "productivity",
       "homepage": "https://github.com/anthropics/claude-plugins-public/tree/main/plugins/project-artifact"
+    },
+    {
+      "name": "prompt-lookup",
+      "description": "Activates when the user asks about AI prompts, needs prompt templates, wants to search for prompts, or mentions prompts.chat. Use for discovering, retrieving, and improving prompts.",
+      "author": {
+        "name": "f"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/f/prompts.chat.git",
+        "path": "plugins/claude/prompts.chat/skills/prompt-lookup",
+        "ref": "main",
+        "sha": "190016c0c59d0b82daf377a8d1e903570e7fe4fe"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://prompts.chat"
     },
     {
       "name": "pydantic-ai",
@@ -3306,6 +3474,31 @@
         "sha": "cc5af6505c27939222072449278f6356857cb064"
       },
       "homepage": "https://shopify.dev"
+    },
+    {
+      "name": "sickn33-skills",
+      "description": "Curated bundle of agentic skills: Helium MCP for news and market research, Matplotlib and Plotly for data visualization, Monte Carlo data-observability helpers for SQL/dbt changes, and an oral health data analyzer.",
+      "author": {
+        "name": "sickn33"
+      },
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sickn33/agentic-awesome-skills.git",
+        "path": "skills",
+        "ref": "main",
+        "sha": "50a74ca3ddea4a91a45bdc625f0e354b6e54f1b4"
+      },
+      "strict": false,
+      "skills": [
+        "./helium-mcp",
+        "./matplotlib",
+        "./monte-carlo-prevent",
+        "./monte-carlo-validation-notebook",
+        "./oral-health-analyzer",
+        "./plotly"
+      ],
+      "homepage": "https://github.com/sickn33/agentic-awesome-skills"
     },
     {
       "name": "skill-creator",
