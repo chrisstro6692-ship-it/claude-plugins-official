@@ -1,0 +1,8 @@
+{
+  "name": "prompt-shortcuts",
+  "description": "30 popular prompt shortcuts as slash-command skills: /human, /eli5, /critic, /seo, /summarize, /debug, /coverletter and more. Type a shortcut to transform your text or Claude's last answer.",
+  "author": {
+    "name": "Anthropic",
+    "email": "support@anthropic.com"
+  }
+}
