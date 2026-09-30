@@ -3868,6 +3868,17 @@
       "homepage": "https://workos.com"
     },
     {
+      "name": "world-models",
+      "description": "Build World Models RL agents (Ha & Schmidhuber, 2018): a VAE vision model, an MDN-RNN memory model, and a tiny CMA-ES-evolved controller. Train the controller in the real environment or entirely inside the model's own dream, with temperature to resist model exploitation. Includes a runnable PyTorch scaffold.",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/world-models",
+      "category": "development",
+      "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/world-models"
+    },
+    {
       "name": "youdotcom-agent-skills",
       "description": "You.com agent skills for web search, research with citations, and content extraction. Guided integrations for Vercel AI SDK, Claude Agent SDK, OpenAI Agents SDK, crewAI, LangChain, Microsoft Teams.ai, direct REST API, and bash CLI.",
       "author": {

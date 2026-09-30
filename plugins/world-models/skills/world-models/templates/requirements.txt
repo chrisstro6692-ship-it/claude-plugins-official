@@ -1,0 +1,6 @@
+torch>=2.1
+numpy>=1.24
+pillow>=10.0
+cma>=3.3
+gymnasium[box2d]>=1.0   # CarRacing-v3
+# vizdoom>=1.2          # uncomment for the doom preset (VizdoomTakeCover-v0)
