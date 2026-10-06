@@ -2490,6 +2490,19 @@
       "homepage": "https://github.com/NVIDIA/skills"
     },
     {
+      "name": "omniroute",
+      "description": "Connect Claude Code to a self-hosted OmniRoute AI gateway: MCP tools for managing providers, routing combos, usage and cost, plus a skill that routes Claude Code's own model requests through the gateway. Requires OmniRoute running locally with an API key.",
+      "author": {
+        "name": "diegosouzapw"
+      },
+      "category": "development",
+      "source": "./external_plugins/omniroute",
+      "homepage": "https://github.com/diegosouzapw/OmniRoute",
+      "tags": [
+        "community-managed"
+      ]
+    },
+    {
       "name": "oracle-ai-data-platform-workbench-databricks-migrator",
       "description": "Drive the Oracle AI Data Platform (AIDP) Databricks Migration Toolkit in natural language. Plans and executes automated Databricks → AIDP migrations of notebooks, jobs, schedules, and catalog DDL — Pass-1 dependency rewrite + Pass-2 cell-by-cell execute/verify/fix on a live AIDP cluster with Claude.",
       "author": {

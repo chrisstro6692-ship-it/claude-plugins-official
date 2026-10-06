@@ -1,0 +1,8 @@
+{
+  "name": "omniroute",
+  "description": "Connects Claude Code to a locally running OmniRoute AI gateway (https://github.com/diegosouzapw/OmniRoute) over its Streamable HTTP MCP endpoint, exposing its provider, routing, combo, usage, and cost tools. Includes a skill that configures Claude Code to send its own model requests through the gateway. Requires OmniRoute to be installed and running locally with an API key.",
+  "author": {
+    "name": "diegosouzapw"
+  },
+  "homepage": "https://github.com/diegosouzapw/OmniRoute"
+}
