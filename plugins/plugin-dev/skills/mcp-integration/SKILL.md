@@ -339,86 +339,13 @@ Integrate multiple MCP servers:
 
 **Use for:** Workflows spanning multiple services.
 
-## Security Best Practices
+## Security, Error Handling, and Performance
 
-### Use HTTPS/WSS
+For security practices (HTTPS/WSS, token handling, scoped tool permissions), error handling, and performance guidance, consult **`references/best-practices.md`**. It covers:
 
-Always use secure connections:
-
-```json
-✅ "url": "https://mcp.example.com/sse"
-❌ "url": "http://mcp.example.com/sse"
-```
-
-### Token Management
-
-**DO:**
-- ✅ Use environment variables for tokens
-- ✅ Document required env vars in README
-- ✅ Let OAuth flow handle authentication
-
-**DON'T:**
-- ❌ Hardcode tokens in configuration
-- ❌ Commit tokens to git
-- ❌ Share tokens in documentation
-
-### Permission Scoping
-
-Pre-allow only necessary MCP tools:
-
-```markdown
-✅ allowed-tools: [
-  "mcp__plugin_api_server__read_data",
-  "mcp__plugin_api_server__create_item"
-]
-
-❌ allowed-tools: ["mcp__plugin_api_server__*"]
-```
-
-## Error Handling
-
-### Connection Failures
-
-Handle MCP server unavailability:
-- Provide fallback behavior in commands
-- Inform user of connection issues
-- Check server URL and configuration
-
-### Tool Call Errors
-
-Handle failed MCP operations:
-- Validate inputs before calling MCP tools
-- Provide clear error messages
-- Check rate limiting and quotas
-
-### Configuration Errors
-
-Validate MCP configuration:
-- Test server connectivity during development
-- Validate JSON syntax
-- Check required environment variables
-
-## Performance Considerations
-
-### Lazy Loading
-
-MCP servers connect on-demand:
-- Not all servers connect at startup
-- First tool use triggers connection
-- Connection pooling managed automatically
-
-### Batching
-
-Batch similar requests when possible:
-
-```
-# Good: Single query with filters
-tasks = search_tasks(project="X", assignee="me", limit=50)
-
-# Avoid: Many individual queries
-for id in task_ids:
-    task = get_task(id)
-```
+- Security Best Practices
+- Error Handling
+- Performance Considerations
 
 ## Testing MCP Integration
 
@@ -521,6 +448,7 @@ For detailed information, consult:
 - **`references/server-types.md`** - Deep dive on each server type
 - **`references/authentication.md`** - Authentication patterns and OAuth
 - **`references/tool-usage.md`** - Using MCP tools in commands and agents
+- **`references/best-practices.md`** - Security, error handling, and performance
 
 ### Example Configurations
 
