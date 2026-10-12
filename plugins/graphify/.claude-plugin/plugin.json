@@ -1,0 +1,8 @@
+{
+  "name": "graphify",
+  "description": "Generates diagrams and graphs from code, architecture, data flows, and relationships using Mermaid, Graphviz DOT, and ASCII formats",
+  "author": {
+    "name": "Anthropic",
+    "email": "support@anthropic.com"
+  }
+}
