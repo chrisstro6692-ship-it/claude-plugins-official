@@ -3214,6 +3214,19 @@
       "homepage": "https://github.com/spotify/save-to-spotify"
     },
     {
+      "name": "scrapling",
+      "description": "Local web scraping MCP server: fetch pages over HTTP, a real browser, or a stealth browser, extract by CSS selector, run bulk and session-based fetches, and take screenshots, returning clean Markdown. Runs via uvx; requires uv and a one-time browser install.",
+      "author": {
+        "name": "Karim Shoair (D4Vinci)"
+      },
+      "category": "automation",
+      "source": "./external_plugins/scrapling",
+      "homepage": "https://github.com/D4Vinci/Scrapling",
+      "tags": [
+        "community-managed"
+      ]
+    },
+    {
       "name": "security-guidance",
       "description": "Security review for Claude-generated code. Pattern-based warnings on edits, LLM-powered diff review on Stop, and an agentic commit reviewer that catches injection, XSS, SSRF, hardcoded secrets, and 25+ other vulnerability classes.",
       "version": "2.0.6",

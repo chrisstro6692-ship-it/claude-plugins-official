@@ -1,0 +1,8 @@
+{
+  "name": "scrapling",
+  "description": "Scrapling web scraping MCP server (https://github.com/D4Vinci/Scrapling). Fetches pages over plain HTTP, a real Chromium browser, or a stealth browser for sites with anti-bot protection; supports CSS-selector extraction, bulk fetches, persistent sessions, and screenshots, and returns clean Markdown to keep token use low. Runs locally over stdio via uvx.",
+  "author": {
+    "name": "Karim Shoair (D4Vinci)"
+  },
+  "homepage": "https://github.com/D4Vinci/Scrapling"
+}
