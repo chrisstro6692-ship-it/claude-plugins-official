@@ -1,0 +1,85 @@
+# Test cases for ../block-rm-rf.sh. One per line: <EXPECT> <command>
+#   BLOCK = must exit 2, ALLOW = must exit 0,
+#   GAP   = known bypass, currently exits 0 (documented; flip to BLOCK if ever fixed).
+# Run: bash .claude/hooks/tests/run.sh
+
+# Recursive force deletes
+BLOCK rm -rf x
+BLOCK rm -fr x
+BLOCK rm -Rf x
+BLOCK rm -r -f x
+BLOCK /bin/rm -rf x
+BLOCK \rm -rf x
+BLOCK "rm" -rf x
+BLOCK echo $(rm -rf x)
+BLOCK rm -r dir -f
+BLOCK rm --recur --for x
+BLOCK sudo rm -rf x
+BLOCK ls | xargs rm -rf
+BLOCK find . -exec rm -rf {} +
+BLOCK cd a && rm --recursive --force x
+BLOCK git rm -rf x
+
+# Arguments that can expand to flags
+BLOCK x=-rf; rm $x dir
+BLOCK rm $'-rf' dir
+BLOCK rm "$f"
+BLOCK rm {-r,-f} x
+BLOCK rm -r x {-f,}
+BLOCK rm {a,-rf} x
+
+# Safe deletes and look-alikes
+ALLOW rm x
+ALLOW rm -f x
+ALLOW rm -r x
+ALLOW rm -r build
+ALLOW ls -rf
+ALLOW git rm --cached x
+ALLOW rm -- -rf
+ALLOW rm -- "$f"
+ALLOW rm *.log
+ALLOW rm -f build/{a,b}.log
+ALLOW find . -name '*.orig' -exec rm {} \;
+ALLOW git commit -m "fix the rmdir thing"
+
+# Everyday commands (false-positive regressions)
+ALLOW [ -f x ] && echo ok
+ALLOW cd d && [ -d out ]
+ALLOW [[ -n $x ]] || echo empty
+ALLOW [ "$a" = "$b" ] || exit 1
+ALLOW test -f x && echo yes
+ALLOW if [ -d x ]; then ls x; fi
+ALLOW { ls; }
+ALLOW for f in *.md; do echo "$f"; done
+ALLOW for f in plugins/*/LICENSE; do head -1 "$f"; done
+ALLOW while read -r l; do echo "$l"; done < f
+ALLOW case "$f" in *.md) a ;; *) b ;; esac
+ALLOW case "$f" in *.md|*.json) a ;; esac
+ALLOW echo $(date)
+ALLOW x=$(date); echo $x
+ALLOW echo "$(date) $msg"
+ALLOW printf '%s %s\n' "$(date)" "$USER"
+ALLOW ls "$(git rev-parse --show-toplevel)"/plugins/*/README.md
+ALLOW files=($(git diff --name-only))
+ALLOW cat "$file"
+ALLOW find plugins -name SKILL.md -exec head -3 {} \;
+ALLOW git log --format=%h -3
+ALLOW git diff HEAD@{1}
+ALLOW git stash show stash@{0}
+ALLOW git add -A && git commit -m "Update docs"
+ALLOW echo *.json
+ALLOW ls plugins/*/skills
+ALLOW mkdir -p a/{b,c}
+ALLOW jq -r '.plugins[].name' .claude-plugin/marketplace.json
+ALLOW grep -rn 'foo' plugins --include='*.md'
+ALLOW cd .github/scripts && bun install yaml
+ALLOW claude plugin validate plugins/example-plugin
+ALLOW npm test -- --grep "a|b"
+
+# Known gaps: disguised command names (checks removed for false positives)
+GAP rm${IFS}-rf dir
+GAP x=rm; $x -rf dir
+GAP $(echo rm) -rf dir
+GAP `echo rm` -rf dir
+GAP {rm,-rf,x}
+GAP /bin/r[m] -rf x

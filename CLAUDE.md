@@ -33,6 +33,7 @@ commands), JSON manifests, and a few shell hooks. No root build or package.
 - Frontmatter (CI parity): `cd .github/scripts && bun install yaml && cd -` once, then
   `bun .github/scripts/validate-frontmatter.ts <changed .md files>`
 - JSON syntax: `jq empty <file.json>`
+- Hook tests: `bash .claude/hooks/tests/run.sh`
 
 ## Definition of done
 A change is done only when all of these pass on the files you touched:
