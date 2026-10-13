@@ -11,7 +11,8 @@ description: Scaffold a new internal plugin under plugins/ and register it in .c
    - `plugins/<slug>/.claude-plugin/plugin.json` with `name`, `description`,
      `author: {"name": "Anthropic", "email": "support@anthropic.com"}`
    - `plugins/<slug>/LICENSE` — copy `plugins/example-plugin/LICENSE` (Apache 2.0)
-   - `plugins/<slug>/README.md`
+   - `plugins/<slug>/README.md` — include the install line:
+     `/plugin install <slug>@claude-plugins-official`
    - only the parts it needs: `skills/<skill>/SKILL.md` (frontmatter `name` = folder),
      `commands/`, `agents/`, `hooks/`, `.mcp.json`
 3. Add a marketplace entry (append to `plugins`, do not edit others):
