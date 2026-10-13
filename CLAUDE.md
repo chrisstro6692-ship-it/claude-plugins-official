@@ -23,7 +23,7 @@ commands), JSON manifests, and a few shell hooks. No root build or package.
 - Every `plugins/<name>/` must ship a `LICENSE` containing Apache License 2.0
   text (only `plugins/claude-security` is exempt).
 - Skill = `skills/<skill-name>/SKILL.md`; frontmatter `name` must match the folder.
-- Quote frontmatter values containing `{}[]*&#!|>%@\``.
+- Quote frontmatter values containing any of `` {}[]*&#!|>%@` ``.
 - Keep SKILL.md lean; move long sections into `references/` files next to it.
 - New plugin → copy `plugins/example-plugin`, then add its marketplace entry.
 

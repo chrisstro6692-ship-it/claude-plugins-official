@@ -12,6 +12,8 @@ while read -r -a words; do
     r=0 f=0
     for w in "${words[@]:i+1}"; do
       [[ $w == -- ]] && break
+      # A $-argument (rm $x, rm $'-rf') could expand to flags; require `rm -- "$var"`.
+      [[ $w == *\$* ]] && { echo "Blocked: rm with a \$-argument before '--'. Use: rm -- \"\$var\"" >&2; exit 2; }
       case $w in
         --r*) r=1 ;;            # --recursive (rm accepts abbreviations)
         --f*) f=1 ;;            # --force

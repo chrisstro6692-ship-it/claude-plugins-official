@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # PostToolUse (Edit|Write): validate the file Claude just edited.
 # Exit 2 sends stderr back to Claude so it fixes the problem.
+command -v jq >/dev/null || { echo "check-edited-file: jq not installed; edit checks skipped" >&2; exit 1; }
 f=$(jq -r '.tool_input.file_path // empty')
 [ -f "$f" ] || exit 0
 case "$f" in
