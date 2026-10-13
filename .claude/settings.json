@@ -3,7 +3,7 @@
     "allow": [
       "Bash(claude plugin validate *)",
       "Bash(bun .github/scripts/validate-frontmatter.ts *)",
-      "Bash(jq empty *)",
+      "Bash(jq empty *.json)",
       "Bash(git status *)",
       "Bash(git diff)",
       "Bash(git diff --stat)",
