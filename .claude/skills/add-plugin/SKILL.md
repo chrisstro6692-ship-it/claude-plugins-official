@@ -22,4 +22,6 @@ description: Scaffold a new internal plugin under plugins/ and register it in .c
    `claude plugin validate plugins/<slug>`,
    `claude plugin validate .claude-plugin/marketplace.json`,
    `bun .github/scripts/validate-frontmatter.ts <new .md files>`.
+   `jq empty plugins/<slug>/.claude-plugin/plugin.json .claude-plugin/marketplace.json`
+   (plus `plugins/<slug>/.mcp.json` if the plugin has one).
 5. Never touch `external_plugins/` — third-party plugins come via the submission form.
