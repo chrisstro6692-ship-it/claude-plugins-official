@@ -8,6 +8,11 @@ case "$f" in
   *.json)
     out=$(jq empty "$f" 2>&1) || { echo "Invalid JSON in $f: $out" >&2; exit 2; } ;;
   */SKILL.md|*/agents/*.md|*/commands/*.md)
+    if [[ $f == */SKILL.md ]]; then
+      dir=$(basename "$(dirname "$f")")
+      name=$(sed -n '2,/^---$/s/^name:[[:space:]]*//p' "$f" | head -1 | tr -d "\"'")
+      [ -n "$name" ] && [ "$name" != "$dir" ] && { echo "SKILL.md name '$name' must match its folder '$dir'" >&2; exit 2; }
+    fi
     command -v bun >/dev/null || exit 0   # no bun: skip rather than block a fine file
     out=$(bun "$CLAUDE_PROJECT_DIR/.github/scripts/validate-frontmatter.ts" "$f" 2>&1)
     rc=$?
