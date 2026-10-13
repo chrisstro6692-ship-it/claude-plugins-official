@@ -17,8 +17,9 @@ while read -r -a words; do
   for w in "${words[@]}"; do
     [[ $w =~ ^[A-Za-z_][A-Za-z0-9_]*= ]] && continue
     [[ $w == *\$* ]] && { echo "Blocked: command name contains \$ ($w); write the command out literally." >&2; exit 2; }
-    # C: braces/globs in the command word ({rm,-rf,x}, /bin/r[m]) hide what runs. A bare { (group) is fine.
-    [[ $w != "{" && $w == *[\{\[\?\*]* ]] && { echo "Blocked: braces or globs in the command name ($w)." >&2; exit 2; }
+    # C: braces/globs in the command word ({rm,-rf,x}, /bin/r[m]) hide what runs.
+    # Bare { (group), [ and [[ (test commands) are fine.
+    [[ $w != "{" && $w != "[" && $w != "[[" && $w == *[\{\[\?\*]* ]] && { echo "Blocked: braces or globs in the command name ($w)." >&2; exit 2; }
     break
   done
   for ((i = 0; i < ${#words[@]}; i++)); do
@@ -28,8 +29,8 @@ while read -r -a words; do
       [[ $w == -- ]] && break
       # A $-argument (rm $x, rm $'-rf') could expand to flags; require `rm -- "$var"`.
       [[ $w == *\$* ]] && { echo "Blocked: rm with a \$-argument before '--'. Use: rm -- \"\$var\"" >&2; exit 2; }
-      # Brace expansion can produce flags (rm {-r,-f} x).
-      [[ $w == *\{* ]] && { echo "Blocked: rm with a {brace} argument before '--'." >&2; exit 2; }
+      # Brace expansion can produce flags (rm {-r,-f} x) when an alternative starts with '-'.
+      [[ $w == *\{* && $w == *[\{,]-* ]] && { echo "Blocked: rm with a {brace} argument that can expand to a flag." >&2; exit 2; }
       case $w in
         --r*) r=1 ;;            # --recursive (rm accepts abbreviations)
         --f*) f=1 ;;            # --force
