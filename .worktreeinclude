@@ -1,0 +1,4 @@
+# Gitignored files to copy into each new worktree.
+# No env files: this repo has no build or runtime config.
+.claude/settings.local.json
+CLAUDE.local.md

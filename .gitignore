@@ -1,2 +1,8 @@
 *.DS_Store
-.claude/
+.claude/worktrees/
+.claude/settings.local.json
+CLAUDE.local.md
+# Created by `bun install yaml` for the frontmatter validator (see CLAUDE.md)
+.github/scripts/node_modules/
+.github/scripts/package.json
+.github/scripts/bun.lock
