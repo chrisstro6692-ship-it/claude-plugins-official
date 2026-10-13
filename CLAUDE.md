@@ -50,3 +50,8 @@ Report the exact commands you ran and their output. Never say "should work".
 - Command `allowed-tools` was wrong (example-command) — list only tools the
   command actually uses.
 - SKILL.md files grew too long (plugin-dev) — split into `references/`.
+
+## For the human
+- `/clear` between unrelated tasks.
+- `/compact` when one task runs long.
+- Esc Esc to rewind when Claude takes a wrong turn (file edits only; bash changes need git).
