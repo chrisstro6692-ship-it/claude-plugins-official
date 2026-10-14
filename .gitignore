@@ -6,3 +6,4 @@ CLAUDE.local.md
 .github/scripts/node_modules/
 .github/scripts/package.json
 .github/scripts/bun.lock
+dist/
