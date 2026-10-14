@@ -1537,6 +1537,19 @@
       "homepage": "https://github.com/figma/mcp-server-guide"
     },
     {
+      "name": "file-organizer",
+      "description": "Safe file-organization workflows for local folders: sort by type, rename from content, find duplicates, inventory, project folder scaffolding, archive old files, search file contents, and flatten nested folders. Always previews first, never deletes or overwrites, and logs moves so they can be undone.",
+      "author": {
+        "name": "chrisstro6692-ship-it"
+      },
+      "category": "productivity",
+      "source": "./external_plugins/file-organizer",
+      "homepage": "https://github.com/chrisstro6692-ship-it/claude-plugins-official/tree/main/external_plugins/file-organizer",
+      "tags": [
+        "community-managed"
+      ]
+    },
+    {
       "name": "firebase",
       "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
       "category": "database",
@@ -2490,6 +2503,19 @@
       "homepage": "https://github.com/NVIDIA/skills"
     },
     {
+      "name": "omniroute",
+      "description": "Connect Claude Code to a self-hosted OmniRoute AI gateway: MCP tools for managing providers, routing combos, usage and cost, plus a skill that routes Claude Code's own model requests through the gateway. Requires OmniRoute running locally with an API key.",
+      "author": {
+        "name": "diegosouzapw"
+      },
+      "category": "development",
+      "source": "./external_plugins/omniroute",
+      "homepage": "https://github.com/diegosouzapw/OmniRoute",
+      "tags": [
+        "community-managed"
+      ]
+    },
+    {
       "name": "oracle-ai-data-platform-workbench-databricks-migrator",
       "description": "Drive the Oracle AI Data Platform (AIDP) Databricks Migration Toolkit in natural language. Plans and executes automated Databricks → AIDP migrations of notebooks, jobs, schedules, and catalog DDL — Pass-1 dependency rewrite + Pass-2 cell-by-cell execute/verify/fix on a live AIDP cluster with Claude.",
       "author": {
@@ -3199,6 +3225,19 @@
         "sha": "9d05c8cd8c8559552f84e27fe30f46b7693ce69a"
       },
       "homepage": "https://github.com/spotify/save-to-spotify"
+    },
+    {
+      "name": "scrapling",
+      "description": "Local web scraping MCP server: fetch pages over HTTP, a real browser, or a stealth browser, extract by CSS selector, run bulk and session-based fetches, and take screenshots, returning clean Markdown. Runs via uvx; requires uv and a one-time browser install.",
+      "author": {
+        "name": "Karim Shoair (D4Vinci)"
+      },
+      "category": "automation",
+      "source": "./external_plugins/scrapling",
+      "homepage": "https://github.com/D4Vinci/Scrapling",
+      "tags": [
+        "community-managed"
+      ]
     },
     {
       "name": "security-guidance",
