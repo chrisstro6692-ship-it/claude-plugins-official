@@ -30,7 +30,8 @@ token use low.
 Then install the plugin:
 
 ```
-/plugin install scrapling@claude-plugins-official
+/plugin marketplace add chrisstro6692-ship-it/claude-plugins-official
+/plugin install scrapling@chrisstro-plugins
 ```
 
 ## Using your own install instead

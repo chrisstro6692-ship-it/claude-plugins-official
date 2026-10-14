@@ -43,7 +43,12 @@ current project instead of the user-level `~/.claude/settings.json`.
    OMNIROUTE_SERVER_HOST=127.0.0.1
    REQUIRE_API_KEY=true
    OMNIROUTE_MCP_ENFORCE_SCOPES=true
+   OMNIROUTE_MCP_SCOPES=read:health,read:models,read:combos,read:usage,read:quota,read:catalog
    ```
+
+   Always set `OMNIROUTE_MCP_SCOPES` together with `OMNIROUTE_MCP_ENFORCE_SCOPES`. Enforcement
+   on its own makes every MCP tool call fail. Also tell the user to change the dashboard
+   password if they haven't: every npm install starts with `CHANGEME`.
 
    Ask the user whether to continue before you go on.
 
