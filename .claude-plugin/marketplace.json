@@ -1537,6 +1537,19 @@
       "homepage": "https://github.com/figma/mcp-server-guide"
     },
     {
+      "name": "file-organizer",
+      "description": "Safe file-organization workflows for local folders: sort by type, rename from content, find duplicates, inventory, project folder scaffolding, archive old files, search file contents, and flatten nested folders. Always previews first, never deletes or overwrites, and logs moves so they can be undone.",
+      "author": {
+        "name": "chrisstro6692-ship-it"
+      },
+      "category": "productivity",
+      "source": "./external_plugins/file-organizer",
+      "homepage": "https://github.com/chrisstro6692-ship-it/claude-plugins-official/tree/main/external_plugins/file-organizer",
+      "tags": [
+        "community-managed"
+      ]
+    },
+    {
       "name": "firebase",
       "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
       "category": "database",

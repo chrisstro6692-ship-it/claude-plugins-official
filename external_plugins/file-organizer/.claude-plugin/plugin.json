@@ -1,0 +1,7 @@
+{
+  "name": "file-organizer",
+  "description": "Eight safe file-organization workflows for local folders: sort by type, rename files descriptively from their content, report duplicates, inventory a folder, scaffold a client/project folder structure, archive old files, search file contents, and flatten nested folders. Every workflow previews its changes first, never overwrites or deletes, and logs moves so they can be undone.",
+  "author": {
+    "name": "chrisstro6692-ship-it"
+  }
+}
