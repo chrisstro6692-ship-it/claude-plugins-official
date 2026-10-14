@@ -24,23 +24,48 @@ Matches `external_plugins/scrapling/.mcp.json` and is pinned to the same version
 
 ## omniroute
 
-Uses OmniRoute's stdio MCP server (`omniroute --mcp`), which OmniRoute documents for
-Claude Desktop. It needs `npm install -g omniroute`. If Desktop can't find the command,
-use the full path from `which omniroute`.
+Claude Desktop connects to a running OmniRoute gateway through
+[`mcp-remote`](https://www.npmjs.com/package/mcp-remote), pinned to 0.14.3. This uses the
+same HTTP endpoint and API key as the Claude Code plugin.
 
-This differs from the Claude Code plugin, which connects over HTTP to a running gateway
-with a scoped API key. The stdio server opens OmniRoute's local database directly and has
-no API key, so the entry sets its permissions through environment variables instead:
+1. Start the gateway (`omniroute serve`) and harden it as described in
+   `external_plugins/omniroute/README.md`. In particular, change the dashboard password:
+   every npm install starts with `CHANGEME`.
+2. In the dashboard, turn MCP on with the `streamable-http` transport, then create an API key
+   with the **`manage`** scope.
+3. Replace `YOUR_OMNIROUTE_MANAGE_KEY` in the config with that key, keeping the `Bearer `
+   prefix. Claude Desktop stores the key in plain text in its config file.
 
-- `OMNIROUTE_MCP_ENFORCE_SCOPES=true` turns permission checks on. They're off by default,
-  which would let Claude call every tool.
-- `OMNIROUTE_MCP_SCOPES` lists what Claude is allowed to do. The example allows only
-  reading health, models, combos, usage, quota and the catalog.
+Needs Node.js, for `npx`. If Desktop can't find `npx`, use the full path from `which npx`.
 
-To let Claude make changes, add scopes such as `write:combos` or `execute:completions`. The
-full list is in OmniRoute's `docs/frameworks/MCP-SERVER.md`. Treat these settings as a
-safety default rather than a hard security boundary: OmniRoute gives scopes sent by the
-MCP client priority over this list. Read the security notes in
-`external_plugins/omniroute/README.md` before you widen the scopes.
+**Access:** OmniRoute's MCP endpoint only accepts keys with the `manage` scope. In testing
+against OmniRoute 3.8.51, keys with read-only scopes or `mcp:connect` were refused with
+`403 Invalid management token`. A key's own scopes also aren't applied to MCP tool calls
+(OmniRoute reports `source=none`). What Claude may do is therefore controlled by the
+**gateway's** environment, not by the key or by this config.
 
-This entry hasn't been tested against a live OmniRoute install.
+Set these in `~/.omniroute/.env` and restart the gateway:
+
+```
+OMNIROUTE_MCP_ENFORCE_SCOPES=true
+OMNIROUTE_MCP_SCOPES=read:health,read:models,read:combos,read:usage,read:quota,read:catalog
+```
+
+| Gateway settings | Result in testing |
+| --- | --- |
+| Neither setting | Every tool works, including the ones that change settings |
+| `ENFORCE_SCOPES=true` only | Claude connects, but **every** tool call fails with "Insufficient MCP scopes" |
+| Both settings | The read tools listed work. Write tools such as `omniroute_set_routing_strategy` are refused ("Missing: write:combos") |
+
+To allow changes, add scopes such as `write:combos` to `OMNIROUTE_MCP_SCOPES`. The full list
+is in OmniRoute's `docs/frameworks/MCP-SERVER.md`.
+
+**Why not `omniroute --mcp`?** OmniRoute documents a stdio server for Claude Desktop, but in
+the published npm package (3.8.51) it crashes on startup, because the bundled `undici`
+dependency contains only its `package.json`
+(`ERR_MODULE_NOT_FOUND ... dist/node_modules/undici/index.js`). Switch back if a later
+release fixes it.
+
+Tested on 2026-10-14 against a local OmniRoute 3.8.51 gateway with a `manage` key: this
+entry connected, listed 99 tools, and with the gateway settings above, read calls worked and
+write calls were refused. It hasn't been tested inside Claude Desktop itself.

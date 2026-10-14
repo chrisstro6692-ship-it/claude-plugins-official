@@ -5,11 +5,15 @@
       "args": ["--from", "scrapling[ai]==0.4.15", "scrapling-mcp"]
     },
     "omniroute": {
-      "command": "omniroute",
-      "args": ["--mcp"],
+      "command": "npx",
+      "args": [
+        "-y", "mcp-remote@0.14.3",
+        "http://127.0.0.1:20128/api/mcp/stream",
+        "--transport", "http-only",
+        "--header", "Authorization:${OMNIROUTE_AUTH}"
+      ],
       "env": {
-        "OMNIROUTE_MCP_ENFORCE_SCOPES": "true",
-        "OMNIROUTE_MCP_SCOPES": "read:health,read:models,read:combos,read:usage,read:quota,read:catalog"
+        "OMNIROUTE_AUTH": "Bearer YOUR_OMNIROUTE_MANAGE_KEY"
       }
     }
   }
