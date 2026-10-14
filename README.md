@@ -13,7 +13,13 @@ A curated directory of high-quality plugins for Claude Code.
 
 Plugins can be installed directly from this marketplace via Claude Code's plugin system.
 
-To install, run `/plugin install {plugin-name}@claude-plugins-official`
+This fork's marketplace is named `chrisstro-plugins`, because `claude-plugins-official` is reserved for Anthropic's own repository. Add it once:
+
+```
+/plugin marketplace add chrisstro6692-ship-it/claude-plugins-official
+```
+
+Then run `/plugin install {plugin-name}@chrisstro-plugins`
 
 or browse for the plugin in `/plugin > Discover`
 
