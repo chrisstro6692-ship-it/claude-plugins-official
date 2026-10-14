@@ -32,14 +32,24 @@ The plugin does not install or run OmniRoute. You run the gateway yourself.
    OMNIROUTE_SERVER_HOST=127.0.0.1
    REQUIRE_API_KEY=true
    OMNIROUTE_MCP_ENFORCE_SCOPES=true
+   OMNIROUTE_MCP_SCOPES=read:health,read:models,read:combos,read:usage,read:quota,read:catalog
    ```
 
-   Then set a dashboard password at `http://127.0.0.1:20128`.
+   **Change the dashboard password** at `http://127.0.0.1:20128` (Settings → Security). Every
+   npm install starts with the same password, `CHANGEME`, which OmniRoute itself labels
+   insecure.
 
 3. In the dashboard:
-   - Create an API key. Give it only the MCP scopes you want Claude to use. Read-only
-     scopes are a reasonable start.
    - Enable MCP under Settings, with the transport set to `streamable-http`.
+   - Create an API key with the **`manage`** scope. The MCP endpoint refuses any other key
+     (`403 Invalid management token`), including read-only and `mcp:connect` keys.
+
+   What Claude can do over MCP is set by `OMNIROUTE_MCP_SCOPES` in step 2, not by the key's
+   scopes. OmniRoute 3.8.51 doesn't apply a key's scopes to MCP tool calls. With the
+   settings above, Claude can read health, models, combos, usage, quota and the catalog, and
+   write tools are refused. To allow changes, add scopes such as `write:combos`. If you set
+   `OMNIROUTE_MCP_ENFORCE_SCOPES=true` without `OMNIROUTE_MCP_SCOPES`, every tool call
+   fails.
 
 4. Export the key and install the plugin:
 
@@ -50,7 +60,8 @@ The plugin does not install or run OmniRoute. You run the gateway yourself.
    ```
 
    ```
-   /plugin install omniroute@claude-plugins-official
+   /plugin marketplace add chrisstro6692-ship-it/claude-plugins-official
+   /plugin install omniroute@chrisstro-plugins
    ```
 
 5. Optional: run `/omniroute:setup-routing` to route Claude Code itself through the gateway.
@@ -73,9 +84,13 @@ These notes come from a review of OmniRoute v3.8.52 (commit `9e0a2f4`):
 - **Network exposure (high).** Out of the box OmniRoute listens on `0.0.0.0` and
   `REQUIRE_API_KEY` is `false`, so anonymous inference requests from your LAN are served
   with your stored provider credentials. Apply the settings in step 2.
-- **MCP scopes aren't enforced by default.** Unless `OMNIROUTE_MCP_ENFORCE_SCOPES=true`,
-  every API key can call all of the gateway's MCP tools, including the ones that write.
-  `/api/mcp/*` is loopback-only unless a key has the `manage` scope.
+- **Default dashboard password.** Every npm install starts with `INITIAL_PASSWORD=CHANGEME`.
+  Together with the `0.0.0.0` default, anyone on your network can log in to the dashboard
+  until you change it.
+- **MCP scopes aren't enforced by default.** Unless `OMNIROUTE_MCP_ENFORCE_SCOPES=true` and
+  `OMNIROUTE_MCP_SCOPES` are set on the gateway, every MCP tool is callable, including the
+  ones that write. Only `manage`-scoped keys can reach `/api/mcp/*`, and their own scopes
+  aren't applied to tool calls (tested on 3.8.51).
 - **Consumer-account providers.** OmniRoute's "free" capacity comes partly from OAuth and
   web-cookie providers that reuse subscription logins (Claude Pro/Max, ChatGPT, Copilot,
   Cursor, and others). OmniRoute's own warning says this is not authorized for proxy use and
