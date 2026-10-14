@@ -3981,6 +3981,16 @@
         "sha": "8b2d640fe82fadcb69c12af26e4e38ab8ab61ed1"
       },
       "homepage": "https://www.zyte.com"
+    },
+    {
+      "name": "agent-reach-setup",
+      "description": "Safely install Agent-Reach, a CLI that gives an AI agent read and search access to the web, YouTube, GitHub, Reddit, Twitter/X and more: installs a reviewed pinned commit, runs check-only mode first, asks before system installs or account-based channels, and keeps cookies out of the chat.",
+      "author": {
+        "name": "chrisstro6692-ship-it"
+      },
+      "source": "./plugins/agent-reach-setup",
+      "category": "productivity",
+      "homepage": "https://github.com/chrisstro6692-ship-it/claude-plugins-official/tree/main/plugins/agent-reach-setup"
     }
   ]
 }

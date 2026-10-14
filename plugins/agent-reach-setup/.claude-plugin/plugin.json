@@ -1,0 +1,7 @@
+{
+  "name": "agent-reach-setup",
+  "description": "Safely installs Agent-Reach (github.com/Panniantong/agent-reach), a CLI that lets an AI agent read and search the web, YouTube, GitHub, Reddit, Twitter/X and more. Installs a reviewed, pinned commit; runs Agent-Reach's check-only mode first; asks before any system-level install or optional channel; and keeps account cookies out of the chat.",
+  "author": {
+    "name": "chrisstro6692-ship-it"
+  }
+}
