@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "scrapling": {
+      "command": "uvx",
+      "args": ["--from", "scrapling[ai]==0.4.15", "scrapling-mcp"]
+    },
+    "omniroute": {
+      "command": "omniroute",
+      "args": ["--mcp"],
+      "env": {
+        "OMNIROUTE_MCP_ENFORCE_SCOPES": "true",
+        "OMNIROUTE_MCP_SCOPES": "read:health,read:models,read:combos,read:usage,read:quota,read:catalog"
+      }
+    }
+  }
+}
